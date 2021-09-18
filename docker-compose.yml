@@ -1,0 +1,50 @@
+# How to use :
+# docker-compose up -d
+# docker-compose down
+# --------------------------------------------------------------------------------
+
+version: '2'
+services:
+
+  nexus_oss_2:
+    hostname: NEXUS_OSS_2
+    container_name: NEXUS_OSS_2
+    image: sonatype/nexus:2.14.9-01
+    environment: 
+      MAX_HEAP: 768m
+      MIN_HEAP: 256m
+    volumes:
+      - ./nexus/sonatype-work-2:/sonatype-work
+    ports:
+      - 8082:8081
+    networks: 
+      vpn:
+        ipv4_address: 172.168.50.2
+    restart: unless-stopped
+
+  nexus_oss_3:
+    hostname: NEXUS_OSS_3
+    container_name: NEXUS_OSS_3
+    image: sonatype/nexus:2.14.14-01
+    environment: 
+      MAX_HEAP: 768m
+      MIN_HEAP: 256m
+    volumes:
+      - ./nexus/sonatype-work-3:/sonatype-work
+    ports:
+      - 8083:8081
+    networks: 
+      vpn:
+        ipv4_address: 172.168.50.3
+    restart: unless-stopped
+
+
+networks:
+  vpn:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet:  172.168.50.0/24
+          gateway: 172.168.50.1
+
