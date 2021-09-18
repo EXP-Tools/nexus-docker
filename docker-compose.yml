@@ -9,7 +9,7 @@ services:
   nexus_oss_2:
     hostname: NEXUS_OSS_2
     container_name: NEXUS_OSS_2
-    image: sonatype/nexus:2.14.9-01
+    image: sonatype/nexus:2.14.20-02
     environment: 
       MAX_HEAP: 768m
       MIN_HEAP: 256m
@@ -25,12 +25,12 @@ services:
   nexus_oss_3:
     hostname: NEXUS_OSS_3
     container_name: NEXUS_OSS_3
-    image: sonatype/nexus:2.14.14-01
+    image: sonatype/nexus3:3.34.0
     environment: 
       MAX_HEAP: 768m
       MIN_HEAP: 256m
     volumes:
-      - ./nexus/sonatype-work-3:/sonatype-work
+      - ./nexus/sonatype-work-3:/nexus-data
     ports:
       - 8083:8081
     networks: 
