@@ -29,6 +29,7 @@ nexus-docker
 - 打开仓库目录： `cd /usr/local/nexus-docker`
 - 构建镜像并运行： `docker-compose.yml up -d`
 - 启动后，访问 [`http://localhost:8082`](http://localhost:8082) 打开 Nexus2，访问 [`http://localhost:8083`](http://localhost:8083) 打开 Nexus3
-- 登录账密为 `admin / admin123`
+- Nexus2 初始登录账密为 `admin / admin123`
+- Nexus3 初始登录账号为 `admin`，随机密码存储在 `./nexus/sonatype-work-3/admin.password`
 
 
