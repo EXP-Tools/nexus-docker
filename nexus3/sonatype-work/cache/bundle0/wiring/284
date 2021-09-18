@@ -101,7 +101,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.security.privileg
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.goodies.common)(version>=2.3.0))
 118; version=2.3.1
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.storage)(version>=3.34.0))
-256; version=3.34.0
+258; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.firewall.event)(version>=3.34.0))
 258; version=3.34.0
 osgi.wiring.package; (osgi.wiring.package=org.apache.http.protocol)
@@ -211,7 +211,7 @@ osgi.wiring.package; (&(osgi.wiring.package=com.sonatype.clm.dto.model.policy)(v
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.capability.condition)(version>=3.34.0))
 160; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.34.0))
-256; version=3.34.0
+260; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=com.orientechnologies.common.concur)(version>=2.2.0))
 224; version=2.2.36
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.log)(version>=3.34.0))
