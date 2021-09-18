@@ -1,0 +1,13 @@
+ Ë¶ÕØ¿/SYSTEMCONFIG"$
+date2021-09-18 22:44:46.026+0000"
+actionCONFIG"O
+messageDNexus server configuration was changed: [Repository Target Registry]~×½ÕØ¿/SYSTEMBOOT"$
+date2021-09-18 22:44:46.935+0000"
+actionBOOT"1
+message&Started Nexus (version 2.14.20-02 OSS)£›éÛØ¿/AUTHC_AUTHZAUTHC"$
+date2021-09-18 22:46:30.810+0000"
+actionAUTHC"O
+messageDSuccessfully authenticated user [admin] from IP address 172.168.50.1ý›äØ¿/SYSTEMBOOT"$
+date2021-09-18 22:48:48.381+0000"
+actionBOOT"2
+message'Stopping Nexus (version 2.14.20-02 OSS)
