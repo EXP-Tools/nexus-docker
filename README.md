@@ -13,9 +13,11 @@
 
 ```
 nexus-docker
-├── nexus
-│   ├── sonatype-work-2 ........ [nexus2 仓库数据]
-│   └── sonatype-work-3 ........ [nexus3 仓库数据]
+├── nexus2
+│   ├── Dockerfile ............. [nexus2 镜像脚本]
+│   └── sonatype-work .......... [nexus2 仓库数据]
+├── nexus3
+│   └── sonatype-work .......... [nexus3 仓库数据]
 ├── .gitignore
 ├── LICENSE .................... [开源协议]
 ├── docker-compose.yml ......... [docker 编排剧本]
