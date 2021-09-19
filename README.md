@@ -14,10 +14,9 @@
 ```
 nexus-docker
 ├── nexus2
-│   ├── conf ................... [nexus2 仓库配置]
+│   ├── Dockerfile ............. [nexus2 镜像脚本]
 │   └── sonatype-work .......... [nexus2 仓库数据]
 ├── nexus3
-│   ├── conf ................... [nexus3 仓库配置]
 │   └── sonatype-work .......... [nexus3 仓库数据]
 ├── .gitignore
 ├── LICENSE .................... [开源协议]
