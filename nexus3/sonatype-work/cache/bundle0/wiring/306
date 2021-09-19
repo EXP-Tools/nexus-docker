@@ -29,7 +29,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.conten
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.io)(version>=3.34.0))
 106; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.upload)(version>=3.34.0))
-258; version=3.34.0
+256; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.security.authc.apikey)(version>=3.34.0))
 133; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.proxy)(version>=3.34.0))
@@ -211,7 +211,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.orient.entity)(ve
 osgi.wiring.package; (&(osgi.wiring.package=com.google.inject.assistedinject)(version>=1.4.0))
 113; version=1.4.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.34.0))
-260; version=3.34.0
+256; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.codehaus.groovy.transform)(version>=2.4.0))
 123; version=2.4.17
 osgi.wiring.package; (&(osgi.wiring.package=groovy.json)(version>=2.4.0))

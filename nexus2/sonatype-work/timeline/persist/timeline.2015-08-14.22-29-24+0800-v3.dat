@@ -1,0 +1,28 @@
+}∆àˆ‰Ú)SYSTEMBOOT"0
+message%Started Nexus (version 2.11.1-01 OSS)"
+actionBOOT"$
+date2015-08-14 22:29:24.678+0800‡⁄ô˜‰Ú)SYSTEMREINDEX"å
+messageÄRepairing repository index "Central" from path / and below. : Process started on Fri Aug 14 22:29:43 CST 2015, not yet finished."
+actionREINDEX"$
+date2015-08-14 22:29:43.257+0800‚Üˆ¸‰Ú)SYSTEMREINDEX"é
+messageÇRepairing repository index "Snapshots" from path / and below. : Process started on Fri Aug 14 22:31:16 CST 2015, not yet finished."
+actionREINDEX"$
+date2015-08-14 22:31:16.998+0800Ü«ˇ¸‰Ú)SYSTEMREINDEX"≤
+message¶Repairing repository index "Snapshots" from path / and below. : Process started on Fri Aug 14 22:31:16 CST 2015, finished successfully on Fri Aug 14 22:31:18 CST 2015"
+actionREINDEX"$
+date2015-08-14 22:31:18.215+0800±§Ä˝‰Ú)SYSTEMCONFIG"`
+messageUNexus server configuration was changed: [Scheduled Tasks], change was made by [*TASK]"
+actionCONFIG"$
+date2015-08-14 22:31:18.308+0800·úí˝‰Ú)SYSTEMREINDEX"ç
+messageÅRepairing repository index "Releases" from path / and below. : Process started on Fri Aug 14 22:31:20 CST 2015, not yet finished."
+actionREINDEX"$
+date2015-08-14 22:31:20.604+0800ÖÚö˝‰Ú)SYSTEMREINDEX"±
+message•Repairing repository index "Releases" from path / and below. : Process started on Fri Aug 14 22:31:20 CST 2015, finished successfully on Fri Aug 14 22:31:21 CST 2015"
+actionREINDEX"$
+date2015-08-14 22:31:21.714+0800±„õ˝‰Ú)SYSTEMCONFIG"`
+messageUNexus server configuration was changed: [Scheduled Tasks], change was made by [*TASK]"
+actionCONFIG"$
+date2015-08-14 22:31:21.827+0800~î…ûÂÚ)SYSTEMBOOT"1
+message&Stopping Nexus (version 2.11.1-01 OSS)"
+actionBOOT"$
+date2015-08-14 22:40:28.308+0800

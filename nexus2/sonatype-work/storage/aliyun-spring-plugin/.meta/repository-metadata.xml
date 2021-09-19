@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repository-metadata>
+  <version>1.0.0</version>
+  <url>https://maven.aliyun.com/repository/spring-plugin/</url>
+  <id>aliyun-spring-plugin</id>
+  <name>aliyun-spring-plugin</name>
+  <layout>maven2</layout>
+  <policy>release</policy>
+  <localUrl>@rootUrl@/content/repositories/aliyun-spring-plugin</localUrl>
+</repository-metadata>

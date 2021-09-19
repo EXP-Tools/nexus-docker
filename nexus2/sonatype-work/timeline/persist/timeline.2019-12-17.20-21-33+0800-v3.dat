@@ -1,0 +1,10 @@
+}ÉÛ¹žñ-SYSTEMBOOT"0
+message%Started Nexus (version 2.11.1-01 OSS)"
+actionBOOT"$
+date2019-12-17 20:21:33.257+0800õùÂ¼žñ-SYSTEMREPO_PSTATUS_CHANGES"‡
+message|The proxy mode of repository 'Apache Proxy' (ID='apache-snapshots') was set to Allow. The previous state was Blocked (auto)."
+actionREPO_PSTATUS_CHANGES"$
+date2019-12-17 20:22:19.257+0800~ªÁ—´ñ-SYSTEMBOOT"1
+message&Stopping Nexus (version 2.11.1-01 OSS)"
+actionBOOT"$
+date2019-12-18 09:01:10.186+0800

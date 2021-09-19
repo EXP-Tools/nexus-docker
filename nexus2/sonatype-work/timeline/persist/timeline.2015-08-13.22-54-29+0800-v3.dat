@@ -1,0 +1,22 @@
+}Å¿¸¼ò)SYSTEMBOOT"0
+message%Started Nexus (version 2.11.1-01 OSS)"
+actionBOOT"$
+date2015-08-13 22:54:29.829+0800 §Æ¸¼ò)SYSTEMCONFIG"O
+messageDNexus server configuration was changed: [Repository Target Registry]"
+actionCONFIG"$
+date2015-08-13 22:54:30.695+0800œ®™¼¼ò)AUTHC_AUTHZAUTHC"H
+message=Unable to authenticate user [admin] from IP address 127.0.0.1"
+actionAUTHC"$
+date2015-08-13 22:55:30.477+0800œ”æ¼¼ò)AUTHC_AUTHZAUTHC"H
+message=Unable to authenticate user [admin] from IP address 127.0.0.1"
+actionAUTHC"$
+date2015-08-13 22:55:40.308+0800 §š½¼ò)AUTHC_AUTHZAUTHC"L
+messageASuccessfully authenticated user [admin] from IP address 127.0.0.1"
+actionAUTHC"$
+date2015-08-13 22:55:46.982+0800°¢î¿¼ò)SYSTEMREPO_PSTATUS_CHANGES"Â
+message¶The proxy mode of repository 'Codehaus Snapshots' (ID='codehaus-snapshots') was set to Blocked (auto). The previous state was Allow. Last detected transport error: Transport error while executing GET method [repositoryId="codehaus-snapshots", requestPath="/", remoteUrl="https://nexus.codehaus.org/snapshots/"]"
+actionREPO_PSTATUS_CHANGES"$
+date2015-08-13 22:56:30.498+0800~ä…æ½ò)SYSTEMBOOT"1
+message&Stopping Nexus (version 2.11.1-01 OSS)"
+actionBOOT"$
+date2015-08-13 23:41:53.251+0800

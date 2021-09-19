@@ -1,0 +1,13 @@
+}“¦Û›å,SYSTEMBOOT"0
+message%Started Nexus (version 2.11.1-01 OSS)"
+actionBOOT"$
+date2018-10-08 19:36:28.179+0800ÿôŠ¦¤å,SYSTEMREPO_PSTATUS_CHANGES"‘
+message…The proxy mode of repository 'Central' (ID='central') was set to Blocked (auto). The previous state was Allow. Last detected transport error: Transport error while executing GET method [repositoryId="central", requestPath="/com/github/wvengen/proguard-maven-plugin/maven-metadata.xml", remoteUrl="https://repo1.maven.org/maven2/com/github/wvengen/proguard-maven-plugin/maven-metadata.xml"]"
+actionREPO_PSTATUS_CHANGES"$
+date2018-10-09 00:36:30.708+0800æ¨Í¨¤å,SYSTEMREPO_PSTATUS_CHANGES"y
+messagenThe proxy mode of repository 'Central' (ID='central') was set to Allow. The previous state was Blocked (auto)."
+actionREPO_PSTATUS_CHANGES"$
+date2018-10-09 00:37:11.976+0800~¨¯Õ¤å,SYSTEMBOOT"1
+message&Stopping Nexus (version 2.11.1-01 OSS)"
+actionBOOT"$
+date2018-10-09 00:49:25.416+0800

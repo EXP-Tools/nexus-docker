@@ -1,0 +1,82 @@
+ôÀçàÕ•.SYSTEMCONFIG"H
+message=Registered repository group Public Repositories (ID=public) ."
+actionCONFIG"$
+date2020-05-28 12:54:50.315+0800}∞éàÕ•.SYSTEMBOOT"0
+message%Started Nexus (version 2.11.1-01 OSS)"
+actionBOOT"$
+date2020-05-28 12:54:50.416+0800ÓÕëàÕ•.SYSTEMREINDEX"ö
+messageéUpdating repository index "Public Repositories" from path null and below. : Process started on Thu May 28 12:54:50 CST 2020, not yet finished."
+actionREINDEX"$
+date2020-05-28 12:54:50.829+0800ıªîàÕ•.SYSTEMREPO_PSTATUS_CHANGES"á
+message|The proxy mode of repository 'Apache Proxy' (ID='apache-snapshots') was set to Allow. The previous state was Blocked (auto)."
+actionREPO_PSTATUS_CHANGES"$
+date2020-05-28 12:54:51.195+0800õ-Ω≈˙Õ•.SYSTEMREINDEX"«,
+messageª,Updating repository index "Public Repositories" from path null and below. : Process started on Thu May 28 12:54:50 CST 2020, finished on Thu May 28 13:26:05 CST 2020 with error. Error message is: java.io.IOException, Exception(s) happened during reindexAllRepositories() Strack trace: java.io.IOException: Exception(s) happened during reindexAllRepositories()
+	at org.sonatype.nexus.index.DefaultIndexerManager.reindexRepository(DefaultIndexerManager.java:967)
+	at org.sonatype.nexus.index.DefaultIndexerManager.reindexRepository(DefaultIndexerManager.java:938)
+	at org.sonatype.nexus.index.tasks.ReindexTaskHandlerLegacy.reindexRepository(ReindexTaskHandlerLegacy.java:61)
+	at org.sonatype.nexus.index.tasks.AbstractIndexerTask.doRun(AbstractIndexerTask.java:68)
+	at org.sonatype.nexus.scheduling.AbstractNexusTask.call(AbstractNexusTask.java:151)
+	at org.sonatype.scheduling.DefaultScheduledTask.call(DefaultScheduledTask.java:418)
+	at org.sonatype.nexus.threads.MDCAwareCallable.call(MDCAwareCallable.java:44)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:292)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+	Suppressed: java.net.SocketTimeoutException: Read timed out
+		at java.net.SocketInputStream.socketRead0(Native Method)
+		at java.net.SocketInputStream.read(SocketInputStream.java:152)
+		at java.net.SocketInputStream.read(SocketInputStream.java:122)
+		at sun.security.ssl.InputRecord.readFully(InputRecord.java:442)
+		at sun.security.ssl.InputRecord.readV3Record(InputRecord.java:554)
+		at sun.security.ssl.InputRecord.read(InputRecord.java:509)
+		at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:927)
+		at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:884)
+		at sun.security.ssl.AppInputStream.read(AppInputStream.java:102)
+		at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+		at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+		at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+		at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:137)
+		at org.sonatype.nexus.util.WrappingInputStream.read(WrappingInputStream.java:57)
+		at org.sonatype.nexus.proxy.storage.remote.httpclient.InterruptableInputStream.read(InterruptableInputStream.java:74)
+		at org.sonatype.nexus.util.WrappingInputStream.read(WrappingInputStream.java:57)
+		at org.sonatype.nexus.proxy.storage.remote.httpclient.Hc4InputStream.read(Hc4InputStream.java:69)
+		at java.io.BufferedInputStream.read1(BufferedInputStream.java:273)
+		at java.io.BufferedInputStream.read(BufferedInputStream.java:334)
+		at java.io.BufferedInputStream.fill(BufferedInputStream.java:235)
+		at java.io.BufferedInputStream.read1(BufferedInputStream.java:275)
+		at java.io.BufferedInputStream.read(BufferedInputStream.java:334)
+		at java.util.zip.InflaterInputStream.fill(InflaterInputStream.java:238)
+		at java.util.zip.InflaterInputStream.read(InflaterInputStream.java:158)
+		at java.util.zip.GZIPInputStream.read(GZIPInputStream.java:116)
+		at java.io.DataInputStream.readFully(DataInputStream.java:195)
+		at org.apache.maven.index.updater.IndexDataReader.readUTF(IndexDataReader.java:193)
+		at org.apache.maven.index.updater.IndexDataReader.readField(IndexDataReader.java:162)
+		at org.apache.maven.index.updater.IndexDataReader.readDocument(IndexDataReader.java:137)
+		at org.apache.maven.index.updater.IndexDataReader.readIndex(IndexDataReader.java:90)
+		at org.apache.maven.index.updater.DefaultIndexUpdater.unpackIndexData(DefaultIndexUpdater.java:515)
+		at org.apache.maven.index.updater.DefaultIndexUpdater.loadIndexDirectory(DefaultIndexUpdater.java:203)
+		at org.apache.maven.index.updater.DefaultIndexUpdater.access$300(DefaultIndexUpdater.java:76)
+		at org.apache.maven.index.updater.DefaultIndexUpdater$LuceneIndexAdaptor.setIndexFile(DefaultIndexUpdater.java:648)
+		at org.apache.maven.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:877)
+		at org.apache.maven.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:159)
+		at org.sonatype.nexus.index.DefaultIndexerManager.updateRemoteIndex(DefaultIndexerManager.java:1291)
+		at org.sonatype.nexus.index.DefaultIndexerManager.access$1100(DefaultIndexerManager.java:188)
+		at org.sonatype.nexus.index.DefaultIndexerManager$IndexUpdateRunnable.run(DefaultIndexerManager.java:1060)
+		at org.sonatype.nexus.index.DefaultIndexerManager.temporary(DefaultIndexerManager.java:2358)
+		at org.sonatype.nexus.index.DefaultIndexerManager.reindexRepository(DefaultIndexerManager.java:1022)
+		at org.sonatype.nexus.index.DefaultIndexerManager.reindexRepository(DefaultIndexerManager.java:961)
+		at org.sonatype.nexus.index.DefaultIndexerManager$7.perform(DefaultIndexerManager.java:956)
+		at org.sonatype.nexus.index.DefaultIndexerManager$GroupOperation.perform(DefaultIndexerManager.java:384)
+		at org.sonatype.nexus.index.DefaultIndexerManager.reindexRepository(DefaultIndexerManager.java:950)
+		... 14 more
+"
+actionREINDEX"$
+date2020-05-28 13:26:05.240+0800±Œ»˙Õ•.SYSTEMCONFIG"`
+messageUNexus server configuration was changed: [Scheduled Tasks], change was made by [*TASK]"
+actionCONFIG"$
+date2020-05-28 13:26:05.646+0800

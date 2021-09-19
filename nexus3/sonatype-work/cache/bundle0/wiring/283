@@ -197,7 +197,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.apache.commons.io)(version>=1.4.
 osgi.wiring.package; (&(osgi.wiring.package=com.sonatype.nexus.repository.content.npm)(version>=3.34.0))
 322; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.34.0))
-260; version=3.34.0
+256; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.codehaus.groovy.transform)(version>=2.4.0))
 123; version=2.4.17
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.log)(version>=3.34.0))

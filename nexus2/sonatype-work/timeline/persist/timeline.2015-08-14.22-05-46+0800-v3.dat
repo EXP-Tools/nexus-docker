@@ -1,0 +1,37 @@
+}Û√ü‰Ú)SYSTEMBOOT"0
+message%Started Nexus (version 2.11.1-01 OSS)"
+actionBOOT"$
+date2015-08-14 22:05:46.867+0800†ïÒ°‰Ú)AUTHC_AUTHZAUTHC"L
+messageASuccessfully authenticated user [admin] from IP address 127.0.0.1"
+actionAUTHC"$
+date2015-08-14 22:06:25.428+0800∞ÿ˝©‰Ú)SYSTEMREPO_PSTATUS_CHANGES"¬
+message∂The proxy mode of repository 'Codehaus Snapshots' (ID='codehaus-snapshots') was set to Blocked (auto). The previous state was Allow. Last detected transport error: Transport error while executing GET method [repositoryId="codehaus-snapshots", requestPath="/", remoteUrl="https://nexus.codehaus.org/snapshots/"]"
+actionREPO_PSTATUS_CHANGES"$
+date2015-08-14 22:08:38.104+0800¡ì∂Ω‰Ú)SYSTEMCONFIG"p
+messageeUpdated repository Central (ID=central)  as proxy repository for URL https://repo1.maven.org/maven2/."
+actionCONFIG"$
+date2015-08-14 22:13:56.627+0800©î∂Ω‰Ú)SYSTEMCONFIG"X
+messageMNexus server configuration was changed: [Central], change was made by [admin]"
+actionCONFIG"$
+date2015-08-14 22:13:56.628+0800Ôë∫Ω‰Ú)SYSTEMEXPIRE_CACHE"ë
+messageÖExpiring caches for repository Central from path null and below. : Process started on Fri Aug 14 22:13:57 CST 2015, not yet finished."
+actionEXPIRE_CACHE"$
+date2015-08-14 22:13:57.136+0800ì‘ªΩ‰Ú)SYSTEMEXPIRE_CACHE"µ
+message©Expiring caches for repository Central from path null and below. : Process started on Fri Aug 14 22:13:57 CST 2015, finished successfully on Fri Aug 14 22:13:57 CST 2015"
+actionEXPIRE_CACHE"$
+date2015-08-14 22:13:57.332+0800±ÍºΩ‰Ú)SYSTEMCONFIG"`
+messageUNexus server configuration was changed: [Scheduled Tasks], change was made by [*TASK]"
+actionCONFIG"$
+date2015-08-14 22:13:57.482+0800¡èÔø‰Ú)SYSTEMCONFIG"p
+messageeUpdated repository Central (ID=central)  as proxy repository for URL https://repo1.maven.org/maven2/."
+actionCONFIG"$
+date2015-08-14 22:14:36.687+0800©èÔø‰Ú)SYSTEMCONFIG"X
+messageMNexus server configuration was changed: [Central], change was made by [admin]"
+actionCONFIG"$
+date2015-08-14 22:14:36.687+0800„ÖÛø‰Ú)SYSTEMREINDEX"è
+messageÉRepairing repository index "Central" from path null and below. : Process started on Fri Aug 14 22:14:37 CST 2015, not yet finished."
+actionREINDEX"$
+date2015-08-14 22:14:37.189+0800~∫ı’‰Ú)SYSTEMBOOT"1
+message&Stopping Nexus (version 2.11.1-01 OSS)"
+actionBOOT"$
+date2015-08-14 22:20:37.946+0800

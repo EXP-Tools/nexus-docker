@@ -1,0 +1,16 @@
+ı√»º∫å.SYSTEMREPO_PSTATUS_CHANGES"á
+message|The proxy mode of repository 'Apache Proxy' (ID='apache-snapshots') was set to Allow. The previous state was Blocked (auto)."
+actionREPO_PSTATUS_CHANGES"$
+date2020-03-11 09:56:57.539+0800}—”º∫å.SYSTEMBOOT"0
+message%Started Nexus (version 2.11.1-01 OSS)"
+actionBOOT"$
+date2020-03-11 09:56:58.961+0800ÕıçºÕå.SYSTEMREPO_PSTATUS_CHANGES"ﬂ
+message”The proxy mode of repository 'Apache Proxy' (ID='apache-snapshots') was set to Blocked (auto). The previous state was Allow. Last detected transport error: Transport error while executing GET method [repositoryId="apache-snapshots", requestPath="/.meta/prefixes.txt", remoteUrl="https://repository.apache.org/snapshots/.meta/prefixes.txt"]"
+actionREPO_PSTATUS_CHANGES"$
+date2020-03-11 21:00:55.925+0800ıøéÏÕå.SYSTEMREPO_PSTATUS_CHANGES"á
+message|The proxy mode of repository 'Apache Proxy' (ID='apache-snapshots') was set to Allow. The previous state was Blocked (auto)."
+actionREPO_PSTATUS_CHANGES"$
+date2020-03-11 21:14:02.431+0800~Ú¿˛“å.SYSTEMBOOT"1
+message&Stopping Nexus (version 2.11.1-01 OSS)"
+actionBOOT"$
+date2020-03-12 00:13:49.554+0800

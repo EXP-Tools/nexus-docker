@@ -1,0 +1,109 @@
+~…˚‹⁄ø/SYSTEMBOOT"$
+date2021-09-18 23:56:43.848+0000"
+actionBOOT"1
+message&Started Nexus (version 2.14.20-02 OSS)ï«ú®€ø/SYSTEMCONFIG"$
+date2021-09-19 00:17:16.871+0000"
+actionCONFIG"D
+message9Nexus server configuration was changed: [Scheduled Tasks]ïú®€ø/SYSTEMCONFIG"$
+date2021-09-19 00:17:16.912+0000"
+actionCONFIG"D
+message9Nexus server configuration was changed: [Scheduled Tasks]·≤ù®€ø/SYSTEMRepositoryMigrationTask"$
+date2021-09-19 00:17:16.977+0000"!
+actionRepositoryMigrationTask"n
+messagecUpgrading repository: releases : Process started on Sun Sep 19 00:17:16 UTC 2021, not yet finished.ïÃù®€ø/SYSTEMCONFIG"$
+date2021-09-19 00:17:17.004+0000"
+actionCONFIG"D
+message9Nexus server configuration was changed: [Scheduled Tasks]ïÊù®€ø/SYSTEMCONFIG"$
+date2021-09-19 00:17:17.030+0000"
+actionCONFIG"D
+message9Nexus server configuration was changed: [Scheduled Tasks]ï’ü®€ø/SYSTEMCONFIG"$
+date2021-09-19 00:17:17.269+0000"
+actionCONFIG"D
+message9Nexus server configuration was changed: [Scheduled Tasks]ïÏü®€ø/SYSTEMCONFIG"$
+date2021-09-19 00:17:17.292+0000"
+actionCONFIG"D
+message9Nexus server configuration was changed: [Scheduled Tasks]˘æ•®€ø/SYSTEMRepositoryMigrationTask"$
+date2021-09-19 00:17:18.014+0000"!
+actionRepositoryMigrationTask"Ö
+messagezUpgrading repository: releases : Process started on Sun Sep 19 00:17:16 UTC 2021, canceled on Sun Sep 19 00:17:18 UTC 2021±õß®€ø/SYSTEMCONFIG"$
+date2021-09-19 00:17:18.235+0000"
+actionCONFIG"`
+messageUNexus server configuration was changed: [Scheduled Tasks], change was made by [*TASK]±ôÏ®€ø/SYSTEMCONFIG"$
+date2021-09-19 00:17:27.065+0000"
+actionCONFIG"`
+messageUNexus server configuration was changed: [Scheduled Tasks], change was made by [*TASK]‚ØÏ®€ø/SYSTEMRepositoryMigrationTask"$
+date2021-09-19 00:17:27.087+0000"!
+actionRepositoryMigrationTask"o
+messagedUpgrading repository: snapshots : Process started on Sun Sep 19 00:17:27 UTC 2021, not yet finished.˙◊˛©€ø/SYSTEMRepositoryMigrationTask"$
+date2021-09-19 00:17:45.815+0000"!
+actionRepositoryMigrationTask"Ü
+message{Upgrading repository: snapshots : Process started on Sun Sep 19 00:17:27 UTC 2021, canceled on Sun Sep 19 00:17:45 UTC 2021±ÅÅ™€ø/SYSTEMCONFIG"$
+date2021-09-19 00:17:46.112+0000"
+actionCONFIG"`
+messageUNexus server configuration was changed: [Scheduled Tasks], change was made by [*TASK]±÷ä™€ø/SYSTEMCONFIG"$
+date2021-09-19 00:17:47.350+0000"
+actionCONFIG"`
+messageUNexus server configuration was changed: [Scheduled Tasks], change was made by [*TASK]„Îä™€ø/SYSTEMRepositoryMigrationTask"$
+date2021-09-19 00:17:47.371+0000"!
+actionRepositoryMigrationTask"p
+messageeUpgrading repository: thirdparty : Process started on Sun Sep 19 00:17:47 UTC 2021, not yet finished.˚äÕÆ€ø/SYSTEMRepositoryMigrationTask"$
+date2021-09-19 00:19:01.386+0000"!
+actionRepositoryMigrationTask"á
+message|Upgrading repository: thirdparty : Process started on Sun Sep 19 00:17:47 UTC 2021, canceled on Sun Sep 19 00:19:01 UTC 2021±ÅŒÆ€ø/SYSTEMCONFIG"$
+date2021-09-19 00:19:01.505+0000"
+actionCONFIG"`
+messageUNexus server configuration was changed: [Scheduled Tasks], change was made by [*TASK]£´∏Ø€ø/AUTHC_AUTHZAUTHC"$
+date2021-09-19 00:19:15.115+0000"
+actionAUTHC"O
+messageDSuccessfully authenticated user [admin] from IP address 172.168.50.1£—≠…€ø/AUTHC_AUTHZAUTHC"$
+date2021-09-19 00:26:19.729+0000"
+actionAUTHC"O
+messageDSuccessfully authenticated user [admin] from IP address 172.168.50.1ﬁﬂ€ €ø/SYSTEMCONFIG"$
+date2021-09-19 00:26:42.015+0000"
+actionCONFIG"å
+messageÄRegistered repository aliyun-spring (ID=aliyun-spring)  as proxy repository for URL https://maven.aliyun.com/repository/spring/.Âˇﬁ €ø/SYSTEMREPO_PSTATUS_CHANGES"$
+date2021-09-19 00:26:42.431+0000"
+actionREPO_PSTATUS_CHANGES"˜
+messageÎThe proxy mode of repository 'aliyun-spring' (ID='aliyun-spring') was set to Blocked (auto). The previous state was Allow. Last detected transport error: Remote peer of repository M2Repository(id=aliyun-spring) detected as unavailable.Ë◊ﬂ €ø/SYSTEMREINDEX"$
+date2021-09-19 00:26:42.518+0000"
+actionREINDEX"î
+messageàUpdating repository index "aliyun-spring" from path null and below. : Process started on Sun Sep 19 00:26:42 UTC 2021, not yet finished.åŒÍ €ø/SYSTEMREINDEX"$
+date2021-09-19 00:26:43.917+0000"
+actionREINDEX"∏
+message¨Updating repository index "aliyun-spring" from path null and below. : Process started on Sun Sep 19 00:26:42 UTC 2021, finished successfully on Sun Sep 19 00:26:43 UTC 2021±“Î €ø/SYSTEMCONFIG"$
+date2021-09-19 00:26:44.050+0000"
+actionCONFIG"`
+messageUNexus server configuration was changed: [Scheduled Tasks], change was made by [*TASK]ŒÈ∫Ã€ø/SYSTEMCONFIG"$
+date2021-09-19 00:27:10.569+0000"
+actionCONFIG"}
+messagerRegistered repository aliyun (ID=aliyun)  as proxy repository for URL https://maven.aliyun.com/repository/public/.·ﬂæÃ€ø/SYSTEMREINDEX"$
+date2021-09-19 00:27:11.071+0000"
+actionREINDEX"ç
+messageÅUpdating repository index "aliyun" from path null and below. : Process started on Sun Sep 19 00:27:11 UTC 2021, not yet finished.–ÒæÃ€ø/SYSTEMREPO_PSTATUS_CHANGES"$
+date2021-09-19 00:27:11.089+0000"
+actionREPO_PSTATUS_CHANGES"‚
+message÷The proxy mode of repository 'aliyun' (ID='aliyun') was set to Blocked (auto). The previous state was Allow. Last detected transport error: Remote peer of repository M2Repository(id=aliyun) detected as unavailable.Öü…Ã€ø/SYSTEMREINDEX"$
+date2021-09-19 00:27:12.415+0000"
+actionREINDEX"±
+message•Updating repository index "aliyun" from path null and below. : Process started on Sun Sep 19 00:27:11 UTC 2021, finished successfully on Sun Sep 19 00:27:12 UTC 2021±ÕÃ€ø/SYSTEMCONFIG"$
+date2021-09-19 00:27:13.007+0000"
+actionCONFIG"`
+messageUNexus server configuration was changed: [Scheduled Tasks], change was made by [*TASK]Û¿˛—€ø/SYSTEMCONFIG"$
+date2021-09-19 00:28:41.152+0000"
+actionCONFIG"°
+messageïRegistered repository aliyun-spring-plugin (ID=aliyun-spring-plugin)  as proxy repository for URL https://maven.aliyun.com/repository/spring-plugin/.˙ÔÅ“€ø/SYSTEMREPO_PSTATUS_CHANGES"$
+date2021-09-19 00:28:41.583+0000"
+actionREPO_PSTATUS_CHANGES"å
+messageÄThe proxy mode of repository 'aliyun-spring-plugin' (ID='aliyun-spring-plugin') was set to Blocked (auto). The previous state was Allow. Last detected transport error: Remote peer of repository M2Repository(id=aliyun-spring-plugin) detected as unavailable.Ô∂Ç“€ø/SYSTEMREINDEX"$
+date2021-09-19 00:28:41.654+0000"
+actionREINDEX"õ
+messageèUpdating repository index "aliyun-spring-plugin" from path null and below. : Process started on Sun Sep 19 00:28:41 UTC 2021, not yet finished.ìÎå“€ø/SYSTEMREINDEX"$
+date2021-09-19 00:28:42.987+0000"
+actionREINDEX"ø
+message≥Updating repository index "aliyun-spring-plugin" from path null and below. : Process started on Sun Sep 19 00:28:41 UTC 2021, finished successfully on Sun Sep 19 00:28:42 UTC 2021±¢é“€ø/SYSTEMCONFIG"$
+date2021-09-19 00:28:43.170+0000"
+actionCONFIG"`
+messageUNexus server configuration was changed: [Scheduled Tasks], change was made by [*TASK]ñˇ·€ø/SYSTEMBOOT"$
+date2021-09-19 00:33:03.382+0000"
+actionBOOT"2
+message'Stopping Nexus (version 2.14.20-02 OSS)

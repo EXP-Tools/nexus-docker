@@ -64,5 +64,50 @@
       <notes>Automatically added on Sat Sep 18 22:44:42 UTC 2021</notes>
       <typeId>OutreachMarkerCapability</typeId>
     </capability>
+    <capability>
+      <version>1</version>
+      <id>0000320f1507edda</id>
+      <notes></notes>
+      <typeId>migrationagent</typeId>
+      <properties>
+        <property>
+          <key>accessToken</key>
+          <value>{+T9PjOVORJQHUleLaHXieBT6jxB5WBf5pXx41rCIcas=}</value>
+        </property>
+      </properties>
+    </capability>
+    <capability>
+      <version>1</version>
+      <id>000032a3b918a6f9</id>
+      <typeId>migrationagent.repository</typeId>
+      <properties>
+        <property>
+          <key>repository_id</key>
+          <value>releases</value>
+        </property>
+      </properties>
+    </capability>
+    <capability>
+      <version>1</version>
+      <id>000032a3b918a6fa</id>
+      <typeId>migrationagent.repository</typeId>
+      <properties>
+        <property>
+          <key>repository_id</key>
+          <value>snapshots</value>
+        </property>
+      </properties>
+    </capability>
+    <capability>
+      <version>1</version>
+      <id>000032a3b918a6fb</id>
+      <typeId>migrationagent.repository</typeId>
+      <properties>
+        <property>
+          <key>repository_id</key>
+          <value>thirdparty</value>
+        </property>
+      </properties>
+    </capability>
   </capabilities>
 </capabilitiesConfiguration>
