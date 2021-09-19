@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>test.project</groupId>
+  <artifactId>test-maven</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>test-maven</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.catt</groupId>
+      <artifactId>catt-pub-db</artifactId>
+      <version>1.1.1.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+  <build>
+
+    <plugins>
+
+      <!-- 版本打包插件，使用SVN命令行下载项目，再进行提交 mvn release:prepare mvn release:perform -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <tagBase>http://172.168.27.5:81/svn/release/103mtosi/src/mtosi-test/tags/</tagBase>
+        </configuration>
+      </plugin>
+      <!-- 版本打包插件 end -->
+    </plugins>
+  </build>
+
+  <distributionManagement>
+    <repository>
+      <id>Releases</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>Snapshots</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+</project>

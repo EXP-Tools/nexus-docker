@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.catt</groupId>
+  <artifactId>common-module-attachment</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20151029.025935</timestamp>
+      <buildNumber>4</buildNumber>
+    </snapshot>
+    <lastUpdated>20151029025935</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.0-20151029.025935-4</value>
+        <updated>20151029025935</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

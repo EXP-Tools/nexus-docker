@@ -93,7 +93,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.capability.condit
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.app)(version>=3.34.0))
 106; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.34.0))
-256; version=3.34.0
+260; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.config)(version>=3.34.0))
 257; version=3.34.0
 osgi.wiring.package; (osgi.wiring.package=org.sonatype.licensing.feature)
@@ -129,7 +129,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.security.privileg
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.goodies.common)(version>=2.3.0))
 118; version=2.3.1
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.storage)(version>=3.34.0))
-258; version=3.34.0
+256; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=com.google.common.graph)(version>=30.1.0))
 14; version=30.1.1
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.security.realm)(version>=3.34.0))

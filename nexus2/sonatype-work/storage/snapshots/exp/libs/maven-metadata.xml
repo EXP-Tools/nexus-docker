@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <plugins>
+    <plugin>
+      <name>mojo-release-plugin</name>
+      <prefix>mojo-release</prefix>
+      <artifactId>mojo-release-plugin</artifactId>
+    </plugin>
+  </plugins>
+</metadata>

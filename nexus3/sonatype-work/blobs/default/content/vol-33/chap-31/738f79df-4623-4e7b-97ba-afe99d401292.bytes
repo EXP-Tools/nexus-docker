@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.catt.frame</groupId>
+  <artifactId>MtosiAdapter</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0.0.6-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20151028062135</lastUpdated>
+  </versioning>
+</metadata>

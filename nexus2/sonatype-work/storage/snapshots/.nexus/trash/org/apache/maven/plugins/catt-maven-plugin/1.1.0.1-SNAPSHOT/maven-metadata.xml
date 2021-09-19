@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>catt-maven-plugin</artifactId>
+  <version>1.1.0.1-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20141028.025236</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20141028025236</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>1.1.0.1-20141028.025236-1</value>
+        <updated>20141028025236</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.1.0.1-20141028.025236-1</value>
+        <updated>20141028025236</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

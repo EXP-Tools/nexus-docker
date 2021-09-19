@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.catt</groupId>
+  <artifactId>deployTest</artifactId>
+  <version>1.0.0.1-SNAPSHOT</version>
+
+  <name>deployTest</name>
+  <description>1、log4j换成logback；
+2、jdom换成dom4j；
+3、去除inms-utility；
+4、去除service-com；</description>
+  <url>http://172.168.27.5:81/svn/release/300_wgjk/05_tools/scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/05_tools/02_sysself-waitmonitor/trunk/</url>
+
+  <issueManagement>
+    <system>JIAR</system>
+    <url>http://null</url>
+  </issueManagement>
+  <ciManagement>
+    <system>jenkins</system>
+    <url>http://172.168.10.100:8080/jenkins/</url>
+  </ciManagement>
+  <inceptionYear>http://172.168.27.5:81/svn/release/99_publicProject/09_J2seDP/04_maven/ktjsdp-demo-archetype</inceptionYear>
+  <scm>
+    <connection>scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/05_tools/scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/05_tools/02_sysself-waitmonitor/trunk/</connection>
+    <developerConnection>scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/05_tools/scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/05_tools/02_sysself-waitmonitor/trunk/</developerConnection>
+    <tag>scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/05_tools/scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/05_tools/02_sysself-waitmonitor/trunk/tags</tag>
+    <url>http://172.168.27.5:81/svn/release/300_wgjk/05_tools/scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/05_tools/02_sysself-waitmonitor/trunk/</url>
+  </scm>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <ktjsdpVersion>1.1.1.0</ktjsdpVersion>
+  </properties>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8.2</version>
+      <type>jar</type>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+
+  <!-- 私服地址 ，下面地址是公司级jar包发布和快照仓库，项目组使用项目组地址 -->
+  <distributionManagement>
+    <repository>
+      <id>Releases</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>Snapshots</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+</project>

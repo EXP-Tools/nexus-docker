@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.catt</groupId>
+    <artifactId>sysself-waitmonitor</artifactId>
+    <version>1.0.0.4-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+	<name>系统自身监控-待监控公共包</name>
+	<description>
+		1、log4j换成logback；
+		2、jdom换成dom4j；
+		3、去除inms-utility；
+		4、去除service-com；
+	</description>
+	<url>http://172.168.27.5:81/svn/release/300_wgjk/05_tools/02_sysself-waitmonitor/trunk/</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<ktjsdp.version>1.1.3.7-SNAPSHOT</ktjsdp.version>
+		<release.dir>${project.build.directory}/${project.artifactId}-${project.version}</release.dir>
+	</properties>
+
+	<issueManagement>
+		<system>JIAR</system>
+		<url>http://null</url>
+	</issueManagement>
+	<ciManagement>
+		<system>jenkins</system>
+		<url>http://127.0.0.1:8080/jenkins/</url>
+	</ciManagement>
+	<scm>
+		<connection>scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/05_tools/02_sysself-waitmonitor/trunk</connection>
+		<developerConnection>scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/05_tools/02_sysself-waitmonitor/trunk</developerConnection>
+		<url>http://172.168.27.5:81/svn/release/300_wgjk/05_tools/02_sysself-waitmonitor/trunk</url>
+	</scm>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>com.cattsoft</groupId>
+			<artifactId>service-com</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.catt</groupId>
+			<artifactId>catt-utils</artifactId>
+			<version>${ktjsdp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.catt</groupId>
+			<artifactId>catt-pub-conf</artifactId>
+			<version>${ktjsdp.version}</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.jdom</groupId>
+			<artifactId>jdom</artifactId>
+			<version>1.1</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-all</artifactId>
+			<version>5.4.2</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.3</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.13</version>
+		</dependency>
+	
+		<!-- logger condition -->
+		<dependency>
+			<groupId>org.codehaus.janino</groupId>
+			<artifactId>janino</artifactId>
+			<version>2.7.8</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.codehaus.janino</groupId>
+			<artifactId>commons-compiler</artifactId>
+			<version>2.7.8</version>
+		</dependency>
+	
+		<!-- 测试依赖 -->
+		<dependency>
+			<groupId>com.catt</groupId>
+			<artifactId> catt-pub-db</artifactId>
+			<version>${ktjsdp.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.cattsoft</groupId>
+			<artifactId>ojdbc-14</artifactId>
+			<version>1.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.29</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.sybase</groupId>
+			<artifactId>jdbc3</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.microsoft.jdbc</groupId>
+			<artifactId>sqlserver2000</artifactId>
+			<version>1.0.0</version>
+			<type>pom</type>
+			<scope>test</scope>
+		</dependency>
+	
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.7.2</version>
+				<configuration>
+					<!-- 解决控制台输出乱码问题 -->
+					<forkMode>once</forkMode>
+					<argLine>-Dfile.encoding=UTF-8</argLine>
+					<systemProperties>
+						<property>
+							<name>net.sourceforge.cobertura.datafile</name>
+							<value>target/cobertura/cobertura.ser</value>
+						</property>
+					</systemProperties>
+					<!-- 跳过测试 -->
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+
+			<!-- 自动生成脚本插件 -->
+			<!-- plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>catt-maven-plugin</artifactId>
+				<version>1.2.0.4</version>
+				<executions>
+					<execution>
+						<id>catt-maven-plugin</id>
+						<phase>install</phase>
+						<goals>
+							<goal>install</goal>
+						</goals>
+						<configuration>
+							<scriptType>lib</scriptType>
+							<mainClass>com.catt.zhwg.alarm.adapter.Main</mainClass>
+							<versionClass>com.catt.zhwg.alarm.adapter.Version</versionClass>
+							<charset>UTF-8</charset>
+							<xms>64m</xms>
+							<xmx>512m</xmx>
+							<jdkParams>-javaagent:./lib/jvm-agent-1.0.0.0.jar</jdkParams>
+							<linuxLibPath>./lib</linuxLibPath>
+							<winLibPath>.\lib</winLibPath>
+							<linuxCommonLibPath>/home/cattsoft/commonLib</linuxCommonLibPath>
+							<winCommonLibPath>D:\commonLib</winCommonLibPath>
+							<linuxMavenLibPath>/home/cattsoft/mavenRepository</linuxMavenLibPath>
+							<winMavenLibPath>D:\mavenRepository</winMavenLibPath>
+							<pathPrefixMode>2</pathPrefixMode>
+							<mainProVersion>false</mainProVersion>
+							<cpsMain>true</cpsMain>
+							<cpsAnt>false</cpsAnt>
+							<cpsCrypto>false</cpsCrypto>
+							<cpsAutodb>false</cpsAutodb>
+							<cpsStartcheck>false</cpsStartcheck>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin -->
+            
+			<!-- 目录复制、删除 -->
+			<!-- plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>ant-build</id>
+						<phase>package</phase>
+						<configuration>
+							<target>
+								<echo>拷贝项目配置文件</echo>
+								<copy todir="${release.dir}/conf">
+									<fileset dir="conf" />
+								</copy>
+								<echo>拷贝项目文档</echo>
+								<copy todir="${release.dir}/doc/06_使用文档">
+									<fileset dir="doc/06_使用文档">
+									</fileset>
+								</copy>
+								<copy todir="${release.dir}">
+									<fileset dir=".">
+										<include name="Readme.txt" />
+									</fileset>
+								</copy>
+								<echo>拷贝项目脚本</echo>
+								<copy todir="${release.dir}/script/mysql">
+									<fileset dir="script/mysql">
+									</fileset>
+								</copy>
+								<echo>拷贝编译jar文件</echo>
+								<copy file="${project.build.directory}/${project.artifactId}-${project.version}.jar" tofile="${release.dir}/lib/${project.artifactId}.jar" />
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin -->
+
+			<!-- 复制依赖jar包，根据情况复制 -->
+			<!--
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.8</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${release.dir}/lib</outputDirectory>
+							<excludeTransitive>false</excludeTransitive>
+							<stripVersion>false</stripVersion>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			-->
+
+			<!-- 版本打包插件。 
+				1、下载SVN程序到本地某文件夹，进入该目录
+				 2、打包：mvn release:prepare 
+				 3、提交到私服：mvn release:perform 
+			-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<tagBase>http://172.168.27.5:81/svn/release/300_wgjk/05_tools/02_sysself-waitmonitor/tags</tagBase>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>Releases</id>
+			<url>http://127.0.0.1:8081/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>Snapshots</id>
+			<url>http://127.0.0.1:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>

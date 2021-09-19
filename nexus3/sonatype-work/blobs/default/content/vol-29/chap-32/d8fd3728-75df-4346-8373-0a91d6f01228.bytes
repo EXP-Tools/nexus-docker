@@ -1,0 +1,90 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.catt.frame</groupId>
+  <artifactId>isp-client</artifactId>
+  <version>1.0.0.0-beta</version>
+  <packaging>jar</packaging>
+
+  <name>接口服务提供框架（服务前置jetty版）客户端公共包</name>
+  <url>http://172.168.27.5:81/svn/release/300_wgjk/04_server/04_ISP/client-trunk</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <scm>
+  	<connection>scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/04_server/04_ISP/client-trunk</connection>
+  	<developerConnection>scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/04_server/04_ISP/client-trunk</developerConnection>
+  	<url>http://172.168.27.5:81/svn/release/300_wgjk/04_server/04_ISP/client-trunk</url>
+  </scm>
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8.2</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+<build>
+    <plugins>  
+      <!-- 版本打包插件，使用SVN命令行下载项目，再进行提交 
+      mvn release:prepare 
+      mvn release:perform -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <tagBase>http://172.168.27.5:81/svn/release/300_wgjk/04_server/04_ISP/client-tags
+          </tagBase>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.1.2</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>jar-no-fork</goal>
+              <goal>test-jar-no-fork</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.9.1</version>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+  </build>
+
+  <distributionManagement>
+    <repository>
+      <id>Releases</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>Snapshots</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>  
+  
+</project>

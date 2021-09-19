@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.catt.agent</groupId>
+  <artifactId>generic-adapter</artifactId>
+  <versioning>
+    <latest>2.5.5.5-final</latest>
+    <release>2.5.5.5-final</release>
+    <versions>
+      <version>2.5.5.1</version>
+      <version>2.5.5.2</version>
+      <version>2.5.5.3</version>
+      <version>2.5.5.5-final</version>
+    </versions>
+    <lastUpdated>20150824035432</lastUpdated>
+  </versioning>
+</metadata>

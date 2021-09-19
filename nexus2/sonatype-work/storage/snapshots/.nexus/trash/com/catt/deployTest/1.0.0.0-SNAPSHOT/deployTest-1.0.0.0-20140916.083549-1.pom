@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.catt</groupId>
+  <artifactId>deployTest</artifactId>
+  <version>1.0.0.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>系统自身监控-待监控公共包</name>
+  <description>1、log4j换成logback；
+2、jdom换成dom4j；
+3、去除inms-utility；
+4、去除service-com；</description>
+  <url>http://172.168.27.5:81/svn/release/300_wgjk/05_tools/scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/05_tools/02_sysself-waitmonitor/trunk/</url>
+
+  <issueManagement>
+    <system>JIAR</system>
+    <url>http://null</url>
+  </issueManagement>
+  <ciManagement>
+    <system>jenkins</system>
+    <url>http://172.168.10.100:8080/jenkins/</url>
+  </ciManagement>
+  <inceptionYear>http://172.168.27.5:81/svn/release/99_publicProject/09_J2seDP/04_maven/ktjsdp-demo-archetype</inceptionYear>
+  <scm>
+    <connection>scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/05_tools/scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/05_tools/02_sysself-waitmonitor/trunk/</connection>
+    <developerConnection>scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/05_tools/scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/05_tools/02_sysself-waitmonitor/trunk/</developerConnection>
+    <tag>scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/05_tools/scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/05_tools/02_sysself-waitmonitor/trunk/tags</tag>
+    <url>http://172.168.27.5:81/svn/release/300_wgjk/05_tools/scm:svn:http://172.168.27.5:81/svn/release/300_wgjk/05_tools/02_sysself-waitmonitor/trunk/</url>
+  </scm>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <ktjsdpVersion>1.1.1.0</ktjsdpVersion>
+  </properties>
+
+  <dependencies>
+
+    <!-- 
+    <dependency> 
+      <groupId>com.catt</groupId> 
+      <artifactId>inms-utility</artifactId> 
+      <version>1.0.0</version> 
+    </dependency> 
+      -->
+
+    <dependency>
+      <groupId>com.cattsoft</groupId>
+      <artifactId>service-com</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.catt</groupId>
+      <artifactId> catt-utils</artifactId>
+      <version>${ktjsdpVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.catt</groupId>
+      <artifactId> catt-pub-conf</artifactId>
+      <version>${ktjsdpVersion}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jdom</groupId>
+      <artifactId>jdom</artifactId>
+      <version>1.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.dom4j</groupId>
+      <artifactId>dom4j</artifactId>
+      <version>1.6.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-all</artifactId>
+      <version>5.4.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.0.13</version>
+    </dependency>
+
+    <!-- 测试依赖 -->
+    <dependency>
+      <groupId>com.catt</groupId>
+      <artifactId> catt-pub-db</artifactId>
+      <version>${ktjsdpVersion}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.cattsoft</groupId>
+      <artifactId>ojdbc-14</artifactId>
+      <version>1.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.29</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.sybase</groupId>
+      <artifactId>jdbc3</artifactId>
+      <version>1.0.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8.2</version>
+      <type>jar</type>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.microsoft.jdbc</groupId>
+      <artifactId>sqlserver2000</artifactId>
+      <version>1.0.0</version>
+      <type>pom</type>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.7.2</version>
+        <configuration>
+          <!-- 解决控制台输出乱码问题 -->
+          <forkMode>once</forkMode>
+          <argLine>-Dfile.encoding=UTF-8</argLine>
+          <systemProperties>
+            <property>
+              <name>net.sourceforge.cobertura.datafile</name>
+              <value>target/cobertura/cobertura.ser</value>
+            </property>
+          </systemProperties>
+          <!-- 跳过测试 -->
+          <skipTests>true</skipTests>
+        </configuration>
+      </plugin>
+
+      <!-- 打包源码 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.1.2</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <phase>verify</phase>
+            <goals>
+              <!-- 打包jar源码 -->
+              <goal>jar-no-fork</goal>
+              <!-- 打包test源码 -->
+              <goal>test-jar-no-fork</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+
+  </build>
+
+  <!-- 私服地址 ，下面地址是公司级jar包发布和快照仓库，项目组使用项目组地址 -->
+  <distributionManagement>
+    <repository>
+      <id>Releases</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>Snapshots</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+</project>

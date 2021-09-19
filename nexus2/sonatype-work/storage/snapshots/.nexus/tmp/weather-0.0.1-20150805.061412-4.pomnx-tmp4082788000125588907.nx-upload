@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.catt</groupId>
+  <artifactId>weather</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>ktjsdp-demo-archetype</name>
+  <url>http://172.168.10.100/ktjsdp/</url>
+  <description>ktjsdp-demo-archetype</description>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <release.dir>${project.build.directory}/${project.artifactId}-${project.version}</release.dir>
+    <ktjsdp.version>1.1.3.5</ktjsdp.version>
+    <catt.plugin.version>1.2.0.2</catt.plugin.version>
+    <cxf.version>3.0.1</cxf.version>    
+  </properties>
+
+  <dependencies>
+
+    <!-- 函数表达式处理依赖 start -->
+    <dependency>
+      <groupId>com.cattsoft</groupId>
+      <artifactId>jep</artifactId>
+      <version>3.3.1</version>
+    </dependency>
+    <!-- 函数表达式处理依赖 end -->
+
+    <!-- ktjsdp start -->
+    <dependency>
+      <groupId>com.catt</groupId>
+      <artifactId>catt-utils</artifactId>
+      <version>1.1.3.6-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.catt</groupId>
+      <artifactId>catt-pub-conf</artifactId>
+      <version>${ktjsdp.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.catt</groupId>
+      <artifactId>catt-pub-db</artifactId>
+      <version>${ktjsdp.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.catt</groupId>
+      <artifactId>catt-pub-net</artifactId>
+      <version>${ktjsdp.version}</version>
+    </dependency>
+    <!-- ktjsdp end -->
+
+    <!-- db driver start -->
+    <dependency>
+      <groupId>com.cattsoft</groupId>
+      <artifactId>ojdbc6</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.cattsoft</groupId>
+      <artifactId>mysql</artifactId>
+      <version>5.1.29</version>
+    </dependency>
+    <!--<dependency>
+      <groupId>com.cattsoft</groupId>
+      <artifactId>jconn3</artifactId>
+      <version>1.0</version>
+    </dependency> -->
+    <!-- db driver end -->
+
+    <!-- apache-commons start -->
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.1.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.3</version>
+    </dependency>
+    <!-- apache-commons end -->
+
+    <!-- logback日志框架，替代log4j start -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.0.13</version>
+    </dependency>
+    <!-- logback日志框架，替代log4j end -->
+    
+    <dependency>
+      <groupId>org.codehaus</groupId>
+      <artifactId>catt-jackson-all</artifactId>
+      <version>1.8.3</version>
+    </dependency>
+    
+    
+    <!-- axis客户端依赖开始 -->
+    <dependency>
+      <groupId>axis</groupId>
+      <artifactId>axis</artifactId>
+      <version>1.4</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-discovery</groupId>
+      <artifactId>commons-discovery</artifactId>
+      <version>0.2</version>
+    </dependency>
+    <dependency>
+      <groupId>axis</groupId>
+      <artifactId>axis-jaxrpc</artifactId>
+      <version>1.4</version>
+    </dependency>
+    <dependency>
+      <groupId>xfire</groupId>
+      <artifactId>saaj-api</artifactId>
+      <version>1.3</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>mail</artifactId>
+      <version>1.4.7</version>
+    </dependency>
+  <dependency>
+    <groupId>axis</groupId>
+    <artifactId>axis-wsdl4j</artifactId>
+    <version>1.5.1</version>
+  </dependency>        
+
+    <!-- axis客户端依赖end -->
+
+  <dependency>
+    <groupId>org.quartz</groupId>
+    <artifactId>quartz-all</artifactId>
+    <version>1.8.3</version>
+  </dependency>
+  
+    <!-- jms -->
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-all</artifactId>
+      <version>5.4.2</version>
+      <optional>true</optional>
+    </dependency>
+    <!-- jms end -->
+    
+    <!-- http -->
+    <dependency>
+      <groupId>commons-httpclient</groupId>
+      <artifactId>commons-httpclient</artifactId>
+      <version>3.1-rc1</version>
+      <optional>true</optional>
+    </dependency>
+<!--     <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.3.1</version>
+    </dependency> -->
+    <dependency>
+      <groupId>commons-net</groupId>
+      <artifactId>commons-net</artifactId>
+      <version>3.3</version>
+    </dependency>
+    <!-- http end -->    
+    
+    <!-- cxf -->
+    <dependency>
+      <groupId>org.apache.cxf</groupId>
+      <artifactId>cxf-rt-frontend-jaxws</artifactId>
+      <version>${cxf.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.cxf</groupId>
+      <artifactId>cxf-rt-t

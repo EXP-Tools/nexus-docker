@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.catt</groupId>
+    <artifactId>common-module-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>common-module-mongodb</module>
+        <module>common-module-redis</module>
+        <module>common-module-enum</module>
+        <module>common-module-exception</module>
+        <module>common-module-security</module>
+        <module>common-module-workflow</module>
+        <module>common-module-workflow-lite</module>
+        <module>common-module-plugin</module>
+        <module>common-module-attachment</module>
+        <!-- 支付模块【错误码800】 -->
+        <module>common-module-pay</module>
+
+        <module>common-module-push</module>
+        <!-- 短信模块【错误码600】 -->
+        <module>common-module-sms</module>
+    </modules>
+
+    <properties>
+        <java.doc.version>2.10.3</java.doc.version>
+    </properties>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.12.4</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>genDoc</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>${java.doc.version}</version>
+                        <configuration>
+                            <tags>
+                                <tag>
+                                    <name>Description</name>
+                                    <placement>a</placement>
+                                    <head>描述:</head>
+                                </tag>
+                                <tag>
+                                    <name>Date</name>
+                                    <placement>a</placement>
+                                    <head>时间:</head>
+                                </tag>
+                                <tag>
+                                    <name>date</name>
+                                    <placement>a</placement>
+                                    <head>时间:</head>
+                                </tag>
+                                <tag>
+                                    <name>Datetime</name>
+                                    <placement>a</placement>
+                                    <head>时间:</head>
+                                </tag>
+                                <tag>
+                                    <name>datetime</name>
+                                    <placement>a</placement>
+                                    <head>时间:</head>
+                                </tag>
+                            </tags>
+                            <encoding>UTF-8</encoding>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                                <configuration>
+                                    <encoding>UTF-8</encoding>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <distributionManagement>
+        <repository>
+            <id>Releases100</id>
+            <!--<id>Releases149</id>-->
+            <url>http://172.168.10.100:8081/nexus/content/repositories/releases</url>
+            <!--<url>http://172.168.27.149:9999/nexus/content/repositories/releases</url>-->
+            <!--<url>http://183.62.48.226:7139/nexus/content/repositories/releases</url>-->
+            <!--<url>http://172.168.27.149:1082/nexus/content/repositories/releases</url>-->
+        </repository>
+        <snapshotRepository>
+            <id>Snapshots100</id>
+            <!--<id>Snapshots149</id>-->
+            <url>http://172.168.10.100:8081/nexus/content/repositories/snapshots</url>
+            <!--<url>http://172.168.27.149:9999/nexus/content/repositories/snapshots</url>-->
+            <!--<url>http://183.62.48.226:7139/nexus/content/repositories/snapshots</url>-->
+            <!--<url>http://172.168.27.149:1082/nexus/content/repositories/snapshots</url>-->
+        </snapshotRepository>
+    </distributionManagement>
+</project>

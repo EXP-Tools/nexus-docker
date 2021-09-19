@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.cck.mvn</groupId>
+  <artifactId>mvn-web-common</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20151103.031940</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20151103031940</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>war</extension>
+        <value>0.0.1-20151103.031940-1</value>
+        <updated>20151103031940</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>0.0.1-20151103.031940-1</value>
+        <updated>20151103031940</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <classifier>classes</classifier>
+        <extension>jar</extension>
+        <value>0.0.1-20151103.031940-1</value>
+        <updated>20151103031940</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

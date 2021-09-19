@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.catt</groupId>
+  <artifactId>catt-pub-db</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>catt-pub-db</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8.2</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.catt</groupId>
+      <artifactId>catt-pub-conf</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.logicalcobwebs</groupId>
+      <artifactId>proxool</artifactId>
+      <version>0.9.0RC3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.logicalcobwebs</groupId>
+      <artifactId>proxool-cglib</artifactId>
+      <version>0.9.0</version>
+    </dependency>
+    <dependency>
+      <groupId>net.sf</groupId>
+      <artifactId>jsqlparser</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>oracle.jdbc.driver</groupId>
+      <artifactId>oracle</artifactId>
+      <version>14</version>
+    </dependency>
+
+
+  </dependencies>
+    <!-- 部署到nexus -->
+  <distributionManagement>
+    <repository>
+      <id>Releases</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>Snapshots</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+</project>

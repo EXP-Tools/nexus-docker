@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.catt</groupId>
+	<artifactId>ws-collector</artifactId>
+	<version>1.0.1.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>ws-collector</name>
+	<url>http://183.62.48.226/ktjsdp/</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<ktjsdp.version>1.1.3.5-SNAPSHOT</ktjsdp.version>
+		<release.dir>${project.build.directory}/${project.artifactId}-${project.version}</release.dir>
+	</properties>
+
+	<scm>
+		<connection>scm:svn:http://172.168.27.5:81//svn/release/103mtosi/src/mtosi_ws-conf-collector/trunk</connection>
+		<developerConnection>scm:svn:http://172.168.27.5:81//svn/release/103mtosi/src/mtosi_ws-conf-collector/trunk</developerConnection>
+		<url>scm:svn:http://172.168.27.5:81//svn/release/103mtosi/src/mtosi_ws-conf-collector/trunk</url>
+	</scm>
+
+	<dependencies>
+		<dependency>
+		  <groupId>com.catt</groupId>
+		  <artifactId>catt-utils-lis</artifactId>
+		  <version>2.0.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.catt</groupId>
+			<artifactId>ws-xml-parser</artifactId>
+			<version>1.0.0.1-SNAPSHOT</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.codehaus</groupId>
+			<artifactId>catt-jackson-all</artifactId>
+			<version>1.8.3</version>
+			<optional>true</optional>
+		</dependency>
+    
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.5</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.13</version>
+		</dependency>
+		
+		<!-- dependency>
+		  <groupId>org.slf4j</groupId>
+		  <artifactId>slf4j-log4j12</artifactId>
+		  <version>1.7.5</version>
+		  <optional>true</optional>
+		</dependency>
+
+		<dependency>
+		  <groupId>log4j</groupId>
+		  <artifactId>log4j</artifactId>
+		  <version>1.2.17</version>
+		  <optional>true</optional>
+		</dependency -->
+
+		<dependency>
+			<groupId>com.catt</groupId>
+			<artifactId>catt-utils</artifactId>
+			<version>${ktjsdp.version}</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>com.catt</groupId>
+			<artifactId>catt-pub-conf</artifactId>
+			<version>${ktjsdp.version}</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>com.catt</groupId>
+			<artifactId>catt-pub-db</artifactId>
+			<version>${ktjsdp.version}</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>com.catt</groupId>
+			<artifactId>catt-pub-net</artifactId>
+			<version>${ktjsdp.version}</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.3</version>
+		</dependency>
+	
+		<!-- dependency>
+			<groupId>com.cattsoft</groupId>
+			<artifactId>ojdbc-14</artifactId>
+			<version>1.0</version>
+		</dependency-->
+		<dependency>
+			<groupId>com.cattsoft</groupId>
+			<artifactId>mysql</artifactId>
+			<version>5.1.29</version>
+		</dependency>
+		<!-- dependency>
+			<groupId>com.cattsoft</groupId>
+			<artifactId>jconn3</artifactId>
+			<version>1.0</version>
+		</dependency-->
+	
+		<!-- webservices -->
+		<dependency>
+			<groupId>net.webservices.client</groupId>
+			<artifactId>wsdl4j</artifactId>
+			<version>1.6.2</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>net.webservices.client</groupId>
+			<artifactId>jabref</artifactId>
+			<version>2.9.2</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>net.webservices.client</groupId>
+			<artifactId>soapui</artifactId>
+			<version>1.7.1</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>net.webservices.client</groupId>
+			<artifactId>soapui-xmlbeans</artifactId>
+			<version>1.7</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.xmlbeans</groupId>
+			<artifactId>xmlbeans</artifactId>
+			<version>2.6.0</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.8</version>
+			<type>jar</type>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+			<optional>true</optional>
+			<scope>runtime</scope>
+		</dependency>
+	
+		<!-- Junit4 -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.7.2</version>
+				<configuration>
+					<!-- 解决控制台输出乱码问题 -->
+					<forkMode>once</forkMode>
+					<argLine>-Dfile.encoding=UTF-8</argLine>
+					<systemProperties>
+						<property>
+							<name>net.sourceforge.cobertura.datafile</name>
+							<value>target/cobertura/cobertura.ser</value>
+						</property>
+					</systemProperties>
+					<!-- 跳过测试 -->
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+
+			<!-- 自动生成脚本插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>catt-maven-plugin</artifactId>
+				<version>1.2.0.0</version>
+				<executions>
+					<execution>
+						<id>catt-maven-plugin</id>
+						<phase>install</phase>
+						<goals>
+							<goal>install</goal>
+						</goals>
+						<configuration>
+							<scriptType>lib</scriptType>
+							<mainClass>com.catt.zhwg.ws.collect.conf.Main</mainClass>
+							<versionClass>com.catt.zhwg.ws.collect.Version</versionClass>
+							<charset>UTF-8</charset>
+							<xms>64m</xms>
+							<xmx>256m</xmx>
+							<linuxLibPath>./lib</linuxLibPath>
+							<winLibPath>.\lib</winLibPath>
+							<linuxCommonLibPath>/home/cattsoft/commonLib</linuxCommonLibPath>
+							<winCommonLibPath>D:\commonLib</winCommonLibPath>
+							<linuxMavenLibPath>/home/cattsoft/mavenRepository</linuxMavenLibPath>
+							<winMavenLibPath>D:\mavenRepository</winMavenLibPath>
+							<pathPrefixMode>2</pathPrefixMode>
+							<cpsMain>true</cpsMain>
+							<cpsAnt>false</cpsAnt>
+							<cpsCrypto>false</cpsCrypto>
+							<cpsAutodb>false</cpsAutodb>
+							<cpsStartcheck>false</cpsStartcheck>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+            
+			<!-- 目录复制、删除 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>ant-build</id>
+						<phase>package</phase>
+						<configuration>
+							<target>
+								<echo>拷贝项目配置文件</echo>
+								<copy todir="${release.dir}/conf">
+									<fileset dir="conf">
+										<include name="*.xml" />
+										<include name="*.conf" />
+										<include name="*.dat" />
+									</fileset>
+								</copy>
+								<copy todir="${release.dir}/conf/ws_templates">
+									<fileset dir="conf/ws_templates">
+									</fileset>
+								</copy>
+								<echo>拷贝项目文档</echo>
+								<copy todir="${release.dir}/doc/06_使用文档">
+									<fileset dir="doc/06_使用文档">
+									</fileset>
+								</copy>
+								<echo>拷贝项目脚本</echo>
+								<copy todir="${release.dir}/script">
+									<fileset dir="script">
+									</fileset>
+								</copy>
+								<copy todir="${release.dir}">
+									<fileset dir=".">
+										<include name="Readme.txt" />
+									</fileset>
+								</copy>
+								<echo>拷贝编译jar文件</echo>
+								<copy todir="${release.dir}/lib">
+									<fileset dir="${project.build.directory}">
+										<include name="${project.artifactId}-${project.version}.jar" />
+									</fileset>
+								</copy>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- 复制依赖jar包，根据情况复制 -->
+			<!--
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.8</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${release.dir}/lib</outputDirectory>
+							<excludeTransitive>false</excludeTransitive>
+							<stripVersion>false</stripVersion>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			-->
+
+			<!-- 版本打包插件。 
+				1、下载SVN程序到本地某文件夹，进入该目录
+				 2、打包：mvn release:prepare 
+				 3、提交到私服：mvn release:perform 
+			-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<tagBase>http://172.168.27.5:81/svn/release/103mtosi/src/mtosi_ws-conf-collector/tags
+					</tagBase>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>Releases</id>
+			<url>http://172.168.10.100:8081/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>Snapshots</id>
+			<url>http://172.168.10.100:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>

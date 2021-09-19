@@ -73,7 +73,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.goodies.common)(version
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.filter.export)(version>=3.34.0))
 256; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.storage)(version>=3.34.0))
-258; version=3.34.0
+256; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.yaml.snakeyaml.nodes)(version>=1.28.0))
 215; version=1.28.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.httpclient)(version>=3.34.0))
@@ -147,7 +147,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.conten
 osgi.wiring.package; (&(osgi.wiring.package=org.apache.commons.io)(version>=1.4.0))
 19; version=2.8.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.34.0))
-256; version=3.34.0
+260; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.codehaus.groovy.transform)(version>=2.4.0))
 123; version=2.4.17
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content.fluent)(version>=3.34.0))

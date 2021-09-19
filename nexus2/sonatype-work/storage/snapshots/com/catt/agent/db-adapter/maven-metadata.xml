@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.catt.agent</groupId>
+  <artifactId>db-adapter</artifactId>
+  <versioning>
+    <versions>
+      <version>5.1.0.3-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20150820025206</lastUpdated>
+  </versioning>
+</metadata>

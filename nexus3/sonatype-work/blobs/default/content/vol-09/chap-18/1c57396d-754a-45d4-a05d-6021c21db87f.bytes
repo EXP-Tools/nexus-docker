@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>common-module-parent</artifactId>
+        <groupId>com.catt</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.catt</groupId>
+    <artifactId>common-module-attachment</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>common-module-attachment-data</module>
+        <module>common-module-attachment-repository-entity</module>
+        <module>common-module-attachment-repository-dao</module>
+        <module>common-module-attachment-repository-dao-impl</module>
+        <module>common-module-attachment-service</module>
+        <module>common-module-attachment-service-impl</module>
+        <module>common-module-attachment-web</module>
+        <module>common-module-attachment-web-page</module>
+    </modules>
+
+    <!--公司NEXUS仓库地址-->
+    <distributionManagement>
+        <repository>
+            <id>Releases</id>
+            <url>http://172.168.10.100:8081/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>Snapshots</id>
+            <url>http://172.168.10.100:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <!--公司nexus仓库地址-->
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

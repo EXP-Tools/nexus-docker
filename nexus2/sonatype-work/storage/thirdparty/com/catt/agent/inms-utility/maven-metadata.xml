@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.catt.agent</groupId>
+  <artifactId>inms-utility</artifactId>
+  <versioning>
+    <latest>2.5.7.1-final</latest>
+    <release>2.5.7.1-final</release>
+    <versions>
+      <version>2.5.7.1-final</version>
+    </versions>
+    <lastUpdated>20150824035501</lastUpdated>
+  </versioning>
+</metadata>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.catt</groupId>
+  <artifactId>ktjsdp</artifactId>
+  <version>0.2.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>ktjsdp</name>
+  <url>http://172.168.10.100/ktjsdp/</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8.2</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+    <distributionManagement>
+    <repository>
+      <id>Releases</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>Snapshots</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+    <modules>
+    	<module>catt-util</module>
+    	<module>catt-pub-conf</module>
+    	<module>catt-pub-db</module>
+    	<module>catt-pub-net</module>
+    <module>catt-pub-log</module>
+    <module>catt-pub-tbox</module>
+    <module>catt-util-excel</module>
+    <module>catt-util-task</module>
+    <module>catt-pub-start-check</module>
+    <module>catt-pub-update-script</module>
+    <module>catt-frame-isp</module>
+    <module>catt-frame-collect</module>
+    <module>catt-tools-virtual-interface</module>
+    </modules>
+</project>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.catt.agent</groupId>
+  <artifactId>tdsDriver</artifactId>
+  <versioning>
+    <latest>S1000</latest>
+    <release>S1000</release>
+    <versions>
+      <version>S1000</version>
+    </versions>
+    <lastUpdated>20150821041950</lastUpdated>
+  </versioning>
+</metadata>

@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>ktjsdp</artifactId>
+    <groupId>com.catt</groupId>
+    <version>1.1.3.2</version>
+  </parent>
+  <artifactId>catt-pub-db</artifactId>
+  <name>catt-pub-db</name>
+  <packaging>jar</packaging>
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>catt-pub-conf</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <!-- 工具类，后续推荐数据库配置表读取使用dbutils的封装方法 -->
+    <dependency>
+      <groupId>commons-dbutils</groupId>
+      <artifactId>commons-dbutils</artifactId>
+      <version>1.5</version>
+    </dependency>
+
+    <!-- 连接池 -->
+<!--     <dependency>
+      <groupId>org.logicalcobwebs</groupId>
+      <artifactId>proxool</artifactId>
+      <version>0.9.0RC3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.logicalcobwebs</groupId>
+      <artifactId>proxool-cglib</artifactId>
+      <version>0.9.0</version>
+    </dependency> -->
+    
+    <dependency>
+      <groupId>com.cloudhopper.proxool</groupId>
+      <artifactId>proxool</artifactId>
+      <version>0.9.1</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>log4j</artifactId>
+          <groupId>log4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>avalon-framework-api</artifactId>
+          <groupId>avalon-framework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>commons-logging</artifactId>
+          <groupId>commons-logging</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>  
+    
+    <!-- 使用方言需要依赖 -->
+	<dependency>
+	  <groupId>com.cattsoft</groupId>
+	  <artifactId>jsqlparser</artifactId>
+	  <version>1.0</version>
+	  <optional>true</optional>
+	</dependency>
+    <!-- 数据库驱动，选用 -->
+    <dependency>
+	  <groupId>com.cattsoft</groupId>
+	  <artifactId>ojdbc-14</artifactId>
+	  <version>1.0</version>
+	  <optional>true</optional>
+	</dependency>
+    <dependency>
+      <groupId>com.cattsoft</groupId>
+      <artifactId>mysql</artifactId>
+      <version>5.1.29</version>
+      <scope>runtime</scope>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>com.cattsoft</groupId>
+      <artifactId>jconn3</artifactId>
+      <version>1.0</version>
+      <optional>true</optional>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.cattsoft</groupId>
+      <artifactId>jconn4</artifactId>
+      <version>1.0</version>
+      <optional>true</optional>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.cattsoft</groupId>
+      <artifactId>sqlserver</artifactId>
+      <version>2000</version>
+      <type>pom</type>
+      <optional>true</optional>
+      <scope>runtime</scope>   
+    </dependency>
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>9.3-1100-jdbc41</version>
+      <scope>runtime</scope>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.objectweb</groupId>
+      <artifactId>rmijdbc</artifactId>
+      <version>1.0.0</version>
+      <scope>runtime</scope>
+      <optional>true</optional>
+    </dependency>
+
+    <!-- proxool连接池依赖，没有程序无法启动或日志异常 -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.0.13</version>
+      <optional>true</optional>
+    </dependency>
+
+    <!-- 测试依赖 -->
+    <dependency>
+      <groupId>org.apache.ant</groupId>
+      <artifactId>ant</artifactId>
+      <version>1.9.3</version>
+      <optional>true</optional>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>grobo</groupId>
+      <artifactId>groboutils</artifactId>
+      <version>5</version>
+      <classifier>core</classifier>
+      <scope>test</scope>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>com.ibatis</groupId>
+      <artifactId>ibatis2-common</artifactId>
+      <version>2.1.7.597</version>
+      <scope>test</scope>
+      <optional>true</optional>
+    </dependency>
+  </dependencies>
+
+</project>

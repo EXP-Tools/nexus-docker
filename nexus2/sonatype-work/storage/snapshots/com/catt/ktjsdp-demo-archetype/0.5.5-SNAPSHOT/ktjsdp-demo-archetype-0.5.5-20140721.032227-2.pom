@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.catt</groupId>
+  <artifactId>ktjsdp-demo-archetype</artifactId>
+  <version>0.5.5-SNAPSHOT</version>
+  <packaging>maven-archetype</packaging>
+
+  <name>ktjsdp-demo-archetype</name>
+
+  <build>
+  
+      <plugins>
+
+      <!-- 版本打包插件，使用SVN命令行下载项目，再进行提交 
+            mvn release:prepare 
+            mvn release:perform -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <tagBase>http://172.168.27.5:81/svn/release/99_publicProject/09_J2seDP/04_maven/ktjsdp-demo-archetype2/tags
+          </tagBase>
+        </configuration>
+      </plugin>
+    </plugins>
+    
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>2.2</version>
+      </extension>
+    </extensions>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>2.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+
+  <description>KTJSDP archetype</description>
+  <url>http://172.168.27.5:81/svn/release/99_publicProject/09_J2seDP/04_maven/ktjsdp-demo-archetype2/trunk</url>
+
+  <scm>
+    <connection>http://172.168.27.5:81/svn/release/99_publicProject/09_J2seDP/04_maven/ktjsdp-demo-archetype2/trunkP/04_maven/ktjsdp-demo-archetype</connection>
+    <developerConnection>http://172.168.27.5:81/svn/release/99_publicProject/09_J2seDP/04_maven/ktjsdp-demo-archetype2/trunk</developerConnection>
+    <tag>ktjsdp-demo-archetype</tag>
+    <url>http://172.168.27.5:81/svnmanager/index.php</url>
+  </scm>
+ 
+  <distributionManagement>
+    <repository>
+      <id>Releases</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>Snapshots</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+   
+</project>

@@ -193,12 +193,7 @@
       </localStorage>
       <externalConfiguration>
         <mergeMetadata>true</mergeMetadata>
-        <memberRepositories>
-          <memberRepository>releases</memberRepository>
-          <memberRepository>snapshots</memberRepository>
-          <memberRepository>thirdparty</memberRepository>
-          <memberRepository>central</memberRepository>
-        </memberRepositories>
+        <memberRepositories />
       </externalConfiguration>
     </repository>
     <repository>
@@ -404,7 +399,7 @@
     <hostname>smtp-host</hostname>
     <port>25</port>
     <username>smtp-username</username>
-    <password>{GOUpVq2jszAHbZa467Uoe/wfgX4zkK5TpRbqmW20trA=}</password>
+    <password>{7lzMx1UChVEHovSwcDubHo355YBmGqfR7GHTXwBR6Mo=}</password>
     <systemEmailAddress>system@nexus.org</systemEmailAddress>
   </smtpConfiguration>
   <notification />

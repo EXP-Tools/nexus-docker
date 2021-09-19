@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.catt</groupId>
+  <artifactId>framework-base-repository-dao-impl</artifactId>
+  <versioning>
+    <versions>
+      <version>0.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20151111030911</lastUpdated>
+  </versioning>
+</metadata>

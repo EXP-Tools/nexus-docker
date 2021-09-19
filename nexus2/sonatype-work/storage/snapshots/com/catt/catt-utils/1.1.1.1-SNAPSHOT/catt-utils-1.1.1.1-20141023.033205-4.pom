@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.catt</groupId>
+    <artifactId>ktjsdp</artifactId>
+    <version>1.1.1.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>catt-utils</artifactId>
+  <name>catt-utils</name>
+  <packaging>jar</packaging>
+
+  <dependencies>
+    <!-- 函数表达式处理依赖 -->
+  	<dependency>
+	  <groupId>com.cattsoft</groupId>
+	  <artifactId>jep</artifactId>
+	  <version>3.3.1</version>
+      <optional>true</optional>
+	</dependency>
+	
+    <dependency>
+      <groupId>org.dom4j</groupId>
+      <artifactId>dom4j</artifactId>
+      <version>1.6.1</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus</groupId>
+      <artifactId>catt-jackson-all</artifactId>
+      <version>1.8.3</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.apache</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
+      <scope>provided</scope>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.quartz</groupId>
+      <artifactId>quartz-all</artifactId>
+      <version>1.8.3</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.0.13</version>
+      <optional>true</optional>
+    </dependency>
+    
+    <!-- 多线程测试依赖 
+    <dependency> 
+      <groupId>net.sourceforge.groboutils</groupId> 
+      <artifactId>groboutils-core</artifactId> 
+      <version>5</version> 
+      <sope>test</sope>
+    </dependency>     
+    -->
+    
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.7.2</version>
+        <configuration>
+          <!-- 解决控制台输出乱码问题 -->
+          <forkMode>once</forkMode>
+          <argLine>-Dfile.encoding=UTF-8</argLine>
+          <systemProperties>
+            <property>
+              <name>net.sourceforge.cobertura.datafile</name>
+              <value>target/cobertura/cobertura.ser</value>
+            </property>
+          </systemProperties>
+          <!-- 跳过测试 -->
+          <skipTests>true</skipTests>
+          <includes>
+            <include>**/Test*.java</include>
+          </includes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <description>
+**************************************************
+*                                                *
+*  模块名称   ：Catt-util                   *
+*                                                *
+*  版本号     ：V1.1.0.0                     *
+*                                                *
+*  定版时间   ：2014-08-11 17:00:00         *
+*                                                *
+*  最后修改人 ：黄坚                     *
+*                                                *
+*  程序说明 ：KTJSDP工具模块
+1、字符串工具；2、IO工具；3、正则工具；4、定时任务；*
+*                                                *
+**************************************************
+############################################################
+更新版本：V1.1.0.0
+更新时间：2014-08-11 17:00:00
+修 改 人：黄坚
+一、升级功能：
+1、修正bug；2、添加javascript工具类；3、版本信息父类更新
+
+############################################################
+更新版本：V1.2.10.140107
+更新时间：2014-01-07 17:00:00
+修 改 人：黄坚
+一、升级功能：
+1、新增正则工具模块ValidateUtils；
+
+############################################################
+更新版本：V1.2.9.131210
+更新时间：2013-12-10 17:00:00
+修 改 人：黄坚
+一、升级功能：
+1、bug修复；
+2、功能改进；
+
+############################################################
+更新版本：V1.2.0.131012
+更新时间：2013-10-12 12:00:00
+修 改 人：黄坚
+一、升级功能：
+1、应技术团队加密解密类更新；
+2、修改StringUtils的编解码功能。
+
+############################################################
+更新版本：V1.1.0.130801
+更新时间：2013-08-01 12:00:00
+修 改 人：黄坚
+一、升级功能：
+1、更新加密解密类：废弃旧逻辑，引用公司规范的加密解密类
+2、在FileUtils类添加apache的zip/bzip2/gzip/tar的解、压缩方法
+
+二、升级步骤：
+	1、替换jar包。
+	2、添加apache的commons-compress-1.5.jar包
+
+############################################################
+更新版本：V1.0.2.130520
+更新时间：2013-05-20 12:00:00
+修 改 人：黄坚
+一、升级功能：
+1、目录结构调整；2、对应测试类修改；
+
+二、升级步骤：
+	1、替换jar包。
+
+############################################################
+更新版本：V1.0.1.130508
+更新时间：2013-05-08 12:00:00
+修 改 人：黄坚
+一、升级功能：
+1、目录结构调整；2、方法修改
+
+二、升级步骤：
+	1、替换jar包。
+
+############################################################
+更新版本：V1.0.0.130504
+更新时间：2013-05-04 12:00:00
+修 改 人：张然浩
+一、升级功能：
+新建
+
+二、升级步骤：
+	1、引入jar包。
+
+</description>
+</project>

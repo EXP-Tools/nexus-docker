@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.catt</groupId>
+  <artifactId>ws-xml-parser</artifactId>
+  <version>0.1.0.6-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20150331.071406</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20150331071406</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>0.1.0.6-20150331.071406-1</value>
+        <updated>20150331071406</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>0.1.0.6-20150331.071406-1</value>
+        <updated>20150331071406</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

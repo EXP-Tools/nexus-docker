@@ -1,0 +1,213 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- 如果parent标签有错 Multiple annotations found at this line: - Plugin execution 
+		not covered by lifecy 直接忽略 -->
+	<parent>
+		<artifactId>maven-plugins</artifactId>
+		<groupId>org.apache.maven.plugins</groupId>
+		<version>16</version>
+	</parent>
+
+	<artifactId>catt-maven-plugin</artifactId>
+	<packaging>maven-plugin</packaging>
+	<version>1.1.0.1-SNAPSHOT</version>
+	<url>http://172.168.10.100/ktjsdp/</url>
+
+	<ciManagement>
+		<system>jenkins</system>
+		<url>http://172.168.10.100:8080/jenkins/job/catt-maven-plugin/</url>
+	</ciManagement>
+
+	<scm>
+		<connection>scm:svn:http://172.168.27.5:81/svn/release/99_publicProject/09_J2seDP/04_maven/catt-maven-plugin</connection>
+		<developerConnection>scm:svn:http://172.168.27.5:81/svn/release/99_publicProject/09_J2seDP/04_maven/catt-maven-plugin</developerConnection>
+		<url>http://172.168.27.5:81/svn/release/99_publicProject/09_J2seDP/04_maven/catt-maven-plugin</url>
+	</scm>
+
+	<properties>
+		<mavenVersion>2.0.6</mavenVersion>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.catt</groupId>
+			<artifactId>catt-utils</artifactId>
+			<version>1.1.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-project</artifactId>
+			<version>${mavenVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-settings</artifactId>
+			<version>${mavenVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-artifact</artifactId>
+			<version>${mavenVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-model</artifactId>
+			<version>${mavenVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-plugin-api</artifactId>
+			<version>${mavenVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-core</artifactId>
+			<version>${mavenVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.plexus</groupId>
+			<artifactId>plexus-utils</artifactId>
+			<version>1.5.8</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
+
+		<!-- test -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+
+			<!-- 版本打包插件，使用SVN命令行下载项目，再进行提交 mvn release:prepare mvn release:perform -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<tagBase>http://172.168.27.5:81/svn/release/99_publicProject/09_J2seDP/04_maven/tags
+					</tagBase>
+				</configuration>
+			</plugin>
+
+			<!-- 编译用JDK版本 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.7.2</version>
+				<configuration>
+					<!-- 解决控制台输出乱码问题 -->
+					<forkMode>once</forkMode>
+					<argLine>-Dfile.encoding=UTF-8</argLine>
+					<systemProperties>
+						<property>
+							<name>net.sourceforge.cobertura.datafile</name>
+							<value>target/cobertura/cobertura.ser</value>
+						</property>
+					</systemProperties>
+					<!-- 跳过测试 -->
+					<skipTests>false</skipTests>
+					<includes>
+						<include>**/Test*.java</include>
+					</includes>
+				</configuration>
+			</plugin>
+
+			<!-- 跳过maven构件加密，否则自动版本提交可能会失败 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+
+			<!-- 自动生成脚本插件 -->
+			<!-- 
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>catt-maven-plugin</artifactId>
+				<version>1.0.0.2-SNAPSHOT</version>
+				<executions>
+					<execution>
+						<id>catt-test</id>
+						<phase>package</phase>
+						<goals>
+							<goal>package</goal>
+						</goals>
+						<configuration>
+							<scriptType>lib</scriptType>
+							<mainClass>com.catt.zhwg.socket.Main</mainClass>
+							<versionClass>com.catt.zhwg.socket.Version</versionClass>
+							<charset>UTF-8</charset>
+							<xms>64m</xms>
+							<xmx>128m</xmx>
+							<linuxLibPath>./lib</linuxLibPath>
+							<winLibPath>.\lib</winLibPath>
+							<linuxCommonLibPath>/home/cattsoft/commonLib</linuxCommonLibPath>
+							<winCommonLibPath>D:\commonLib</winCommonLibPath>
+							<linuxMavenLibPath>/home/cattsoft/mavenRepository</linuxMavenLibPath>
+							<winMavenLibPath>D:\mavenRepository</winMavenLibPath>
+							<pathPrefixMode>2</pathPrefixMode>
+							<cpsMain>true</cpsMain>
+							<cpsAnt>false</cpsAnt>
+							<cpsCrypto>true</cpsCrypto>
+							<cpsAutodb>true</cpsAutodb>
+							<cpsStartcheck>true</cpsStartcheck>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			 -->
+
+			<!-- 版本打包插件。 
+				1、下载SVN程序到本地某文件夹，进入该目录
+				 2、打包：mvn release:prepare 
+				 3、提交到私服：mvn 
+				release:perform 
+			-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<tagBase>http://172.168.27.5:81/svn/release/99_publicProject/09_J2seDP/04_maven/tags
+					</tagBase>
+				</configuration>
+			</plugin>
+			
+		</plugins>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>Releases</id>
+			<url>http://172.168.10.100:8081/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>Snapshots</id>
+			<url>http://172.168.10.100:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+</project>

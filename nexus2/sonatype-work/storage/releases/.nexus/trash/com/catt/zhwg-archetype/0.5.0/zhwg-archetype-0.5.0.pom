@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.catt</groupId>
+  <artifactId>zhwg-archetype</artifactId>
+  <version>0.5.0</version>
+  <packaging>maven-archetype</packaging>
+
+  <name>zhwg-archetype</name>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>2.2</version>
+      </extension>
+    </extensions>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>2.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <description>综合网管接口骨架</description>
+
+  <url>http://172.168.27.5:81/svn/release/300wgjk/zhwg-archetype/trunk</url>
+
+  <scm>
+    <tag>zhwg-demo-archetype</tag>
+    <connection>http://172.168.27.5:81/svn/release/300wgjk/zhwg-archetype/trunk</connection>
+    <developerConnection>http://172.168.27.5:81/svn/release/300wgjk/zhwg-archetype/trunk</developerConnection>
+    <url>http://172.168.63.100:81/svnmanager/index.php</url>
+  </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>Releases</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>Snapshots</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+</project>

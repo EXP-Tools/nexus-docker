@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.catt.agent</groupId>
+  <artifactId>jep</artifactId>
+  <versioning>
+    <latest>2.x</latest>
+    <release>2.x</release>
+    <versions>
+      <version>2.x</version>
+    </versions>
+    <lastUpdated>20150821041746</lastUpdated>
+  </versioning>
+</metadata>

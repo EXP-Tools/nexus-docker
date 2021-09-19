@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.catt</groupId>
+  <artifactId>ktjsdp</artifactId>
+  <version>1.1.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>ktjsdp</name>
+  <url>http://172.168.10.100/ktjsdp/</url>
+  <scm>
+    <connection>scm:svn:http://172.168.27.5:81/svn/release/99_publicProject/09_J2seDP/04_maven/ktjsdp</connection>
+    <developerConnection>scm:svn:http://172.168.27.5:81/svn/release/99_publicProject/09_J2seDP/04_maven/ktjsdp</developerConnection>
+    <url>http://172.168.27.5:81/svn/release/99_publicProject/09_J2seDP/04_maven/ktjsdp</url>
+  </scm>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <ciManagement>
+    <system>jenkins</system>
+    <url>http://172.168.10.100:8080/jenkins/job/ktjsdp/</url>
+  </ciManagement>
+
+  <developers>
+    <developer>
+      <id>1</id>
+      <name>黄坚</name>
+      <email>huangjian@gdcattsoft.com</email>
+      <timezone>8</timezone>
+    </developer>
+  </developers>
+
+  <issueManagement>
+    <system>JIRA</system>
+    <url>http://null</url>
+  </issueManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8.2</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <distributionManagement>
+    <repository>
+      <id>Releases</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>Snapshots</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+  <modules>
+    
+    <module>catt-utils</module>
+    <module>catt-utils-excel</module>
+    <module>catt-pub-conf</module>
+    <module>catt-pub-db</module>
+    <module>catt-pub-net</module>
+    <module>catt-pub-log</module>
+    <module>catt-pub-tbox</module>
+    <module>catt-pub-start-check</module>
+    <module>catt-pub-update-script</module>
+    <module>catt-frame-collect</module>
+    <module>catt-tools-virtual-inf</module>
+  </modules>
+  <build>
+    <plugins>
+
+      <!-- 版本打包插件，使用SVN命令行下载项目，再进行提交
+        mvn release:prepare
+        mvn release:perform
+       -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <tagBase>http://172.168.27.5:81/svn/release/99_publicProject/09_J2seDP/04_maven/tags
+          </tagBase>
+        </configuration>
+      </plugin>
+
+      <!-- install/deploy时，打包源码 -->
+      <plugin>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.2.1</version>
+        <configuration>
+          <attach>true</attach>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>compile</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin> 
+      
+     </plugins>
+      <pluginManagement>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.7.2</version>
+            <configuration>
+              <!-- 测试失败继续构建 -->
+              <testFailureIgnore>true</testFailureIgnore>
+              <forkMode>once</forkMode>
+              <argLine>-Dfile.encoding=UTF-8</argLine>
+              <systemProperties>
+                <property>
+                  <name>net.sourceforge.cobertura.datafile</name>
+                  <value>target/cobertura/cobertura.ser</value>
+                </property>
+              </systemProperties>
+              <!-- 跳过测试 -->
+              <skipTests>true</skipTests>
+            </configuration>
+          </plugin>
+
+          <plugin>
+            <artifactId>org.apache.maven.plugin</artifactId>
+            <groupId>maven-site-plugin</groupId>
+            <version>3.3</version>
+          </plugin>
+
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>2.9.1</version>
+          </plugin>
+
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jxr-plugin</artifactId>
+            <version>2.3</version>
+            <configuration>
+              <aggregate>true</aggregate>
+            </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-checkstyle-plugin</artifactId>
+            <version>2.11</version>
+            <configuration>
+              <configLocation>config/maven_checks.xml</configLocation>
+            </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>appassembler-maven-plugin</artifactId>
+            <version>1.2.1</version>
+            <configuration>
+              <configurationDirectory>conf</configurationDirectory>
+              <configurationSourceDirectory>conf</configurationSourceDirectory>
+              <copyConfigurationDirectory>true</copyConfigurationDirectory>
+              <includeConfigurationDirectoryInClasspath>true</includeConfigurationDirectoryInClasspath>
+              <assembleDirectory>${project.build.directory}/KTJSDP-Project</assembleDirectory>
+              <extraJvmArguments>-Xms32m -Xmx256m</extraJvmArguments>
+              <binFileExtensions>
+                <unix>.sh</unix>
+              </binFileExtensions>
+              <platforms>
+                <platform>windows</platform>
+                <platform>unix</platform>
+              </platforms>
+              <repositoryName />
+              <programs>
+                <program>
+                  <mainClass>com.chj360.search.client.App</mainClass>
+                </program>
+              </programs>
+            </configuration>
+          </plugin>
+          
+        </plugins>
+      </pluginManagement>
+  </build>
+  <description>
+当前版本：maven-1.1.0.0
+更新时间：2014-08-11
+负 责 人：黄坚
+
+*****************************************************************************
+当前版本：maven-1.1.0.0
+更新时间：2014-08-11
+负 责 人：黄坚
+更新内容：
+	1、修正多个bug；
+	2、恢复4位版本号；
+	3、摘除catt-utils-task包，集成计入catt-utils包中；
+	4、catt-utils添加javascript脚本调用方法，添加TaskBean对象；
+	5、版本信息超类com.catt.pub.connector.version.Version不建议使用，
+修改为com.catt.pub.connector.version.BaseVersion,修改原static方法为public方法；
+	6、DB模块添加存储过程调用方法；
+	7、DB模块添加ReDBUtils，具有重连功能的数据库连接类，相应修改Conf模块，添加重连属性；
+*****************************************************************************
+当前版本：maven-0.5.5.0
+更新时间：2014-06-01
+负 责 人：黄坚
+更新内容：
+	1、修正多个bug；
+	2、功能完善；
+*****************************************************************************
+当前版本：20140108
+更新时间：2014-01-08
+负 责 人：黄坚、廖权斌、梁宏
+更新内容：
+	1、版本名、文档名称称重定义，文档手册更新；
+	2、logback.xml默认配置更新，解决sql日志双重打印问题；
+	3、添加startCheck、scriptUpdate、VirtualModel模块；
+	4、createScript.bat更新，添加新脚本；
+	5、DB模块更新执行mysql文件的方法；
+	6、NET模块添加JMS工具类、配置文件添加jms对象；
+	7、bug等问题修复。
+*****************************************************************************
+版    本：1.0.2.9
+更新时间：2013-12-10
+更新内容：
+	1、解决1.0.2.3严重bug；
+	2、新增接入检测功能jar包（0.5.0.0beta）；
+	3、logback3个jar包打成1个；
+*****************************************************************************
+*****************************************************************************
+版    本：1.0.2.3
+更新时间：2013-11-30
+更新内容：
+	1、多应用配置文件模块；
+	2、日志模块更新（要求使用slf4j定义接口，使用log4j或logback实现）；
+	3、webservices工具类；
+	4、http工具类；
+	5、修复socket模块bug；
+	5、修复自动脚本bug；
+	6、修复数据库模块bug；
+	7、删除Catt-connector.jar，把该模块内容都放入Catt-utils.jar中。
+*****************************************************************************
+</description>
+</project>

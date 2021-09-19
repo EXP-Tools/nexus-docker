@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.catt.frame</groupId>
+  <artifactId>isp-server</artifactId>
+  <versioning>
+    <versions>
+      <version>0.7.0.1-SNAPSHOT</version>
+      <version>0.8.0.1-SNAPSHOT</version>
+      <version>1.0.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20150814035035</lastUpdated>
+  </versioning>
+</metadata>

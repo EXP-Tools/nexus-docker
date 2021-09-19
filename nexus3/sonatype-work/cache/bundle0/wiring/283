@@ -109,7 +109,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.security.privileg
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.goodies.common)(version>=2.3.0))
 118; version=2.3.1
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.storage)(version>=3.34.0))
-258; version=3.34.0
+256; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.rubygems.marshal)(version>=3.34.0))
 336; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.httpclient)(version>=3.34.0))
@@ -197,7 +197,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.apache.commons.io)(version>=1.4.
 osgi.wiring.package; (&(osgi.wiring.package=com.sonatype.nexus.repository.content.npm)(version>=3.34.0))
 322; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.34.0))
-256; version=3.34.0
+260; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.codehaus.groovy.transform)(version>=2.4.0))
 123; version=2.4.17
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.log)(version>=3.34.0))

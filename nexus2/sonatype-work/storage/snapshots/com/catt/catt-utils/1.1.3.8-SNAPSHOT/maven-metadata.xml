@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.catt</groupId>
+  <artifactId>catt-utils</artifactId>
+  <version>1.1.3.8-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20151222.063146</timestamp>
+      <buildNumber>4</buildNumber>
+    </snapshot>
+    <lastUpdated>20151222063146</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>1.1.3.8-20151222.063146-4</value>
+        <updated>20151222063146</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.1.3.8-20151222.063146-4</value>
+        <updated>20151222063146</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <classifier>javadoc</classifier>
+        <extension>jar</extension>
+        <value>1.1.3.8-20151222.063146-4</value>
+        <updated>20151222063146</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

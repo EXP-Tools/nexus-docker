@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!--项目基本信息(必填)-->
+	<groupId>com.catt</groupId>
+	<artifactId>wsc-integrity-analyzer</artifactId>
+	<version>0.0.0.1</version>
+	<packaging>jar</packaging>
+
+	<name>项目名称(可选)</name>
+	<description>项目描述(可选)</description>
+	<url>项目SVN路径(可选)</url>
+	<inceptionYear>工程的初始时间(可选)</inceptionYear>
+
+	<!--项目的问题管理系统(可选)-->
+	<issueManagement>
+		<system>JIAR</system>
+		<url>http://null</url>
+	</issueManagement>
+	
+	<!--项目的问题追踪系统(可选)-->
+	<ciManagement>
+		<system>jenkins</system>
+		<url>http://172.168.10.100:8080/jenkins/</url>
+	</ciManagement>
+	
+	<!-- 软件配置管理 -->
+	<scm>
+		<!-- 项目SVN主干目录（需保证目录已存在） -->
+		<connection>scm:svn:http://172.168.27.5:81/svn/release/103mtosi/src/mtosi_wsc_integrity_analyzer/tags/wsc-integrity-analyzer-0.0.0.1</connection>
+		<developerConnection>scm:svn:http://172.168.27.5:81/svn/release/103mtosi/src/mtosi_wsc_integrity_analyzer/tags/wsc-integrity-analyzer-0.0.0.1</developerConnection>
+		<url>scm:svn:http://172.168.27.5:81/svn/release/103mtosi/src/mtosi_wsc_integrity_analyzer/tags/wsc-integrity-analyzer-0.0.0.1</url>
+	</scm>
+
+	<!-- 变量定义 -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<release.dir>${project.build.directory}/${project.artifactId}-${project.version}</release.dir>
+		<ktjsdp.version>1.1.3.7</ktjsdp.version>
+		<catt.plugin.version>1.2.0.4</catt.plugin.version>
+		<waitmonitor.version>1.0.0.3</waitmonitor.version>
+	</properties>
+
+	<!-- 项目依赖 -->
+	<dependencies>
+	
+		<!-- ktjsdp平台API包 -->
+		<dependency>
+			<groupId>com.catt</groupId>
+			<artifactId>catt-utils</artifactId>
+			<version>${ktjsdp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.catt</groupId>
+			<artifactId>catt-pub-conf</artifactId>
+			<version>${ktjsdp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.catt</groupId>
+			<artifactId>catt-pub-db</artifactId>
+			<version>${ktjsdp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.catt</groupId>
+			<artifactId>catt-pub-net</artifactId>
+			<version>${ktjsdp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.catt</groupId>
+			<artifactId>catt-pub-start-check</artifactId>
+			<version>${ktjsdp.version}</version>
+		</dependency>
+
+		<!-- 待监控客户端模块 -->
+		<dependency>
+			<groupId>com.catt</groupId>
+			<artifactId>sysself-waitmonitor</artifactId>
+			<version>${waitmonitor.version}</version>
+		</dependency>
+
+		<!-- 数据库驱动 -->
+		<dependency>
+			<groupId>com.cattsoft</groupId>
+			<artifactId>ojdbc-14</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.cattsoft</groupId>
+			<artifactId>mysql</artifactId>
+			<version>5.1.29</version>
+		</dependency>
+		<dependency>
+			<groupId>com.cattsoft</groupId>
+			<artifactId>jconn3</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.xerial</groupId>
+		  <artifactId>sqlite-jdbc</artifactId>
+		  <version>3.7.2</version>
+		</dependency>
+
+		<!-- apache-commons -->
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.3</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.3</version>
+		</dependency>
+
+		<!-- logback -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.5</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>1.0.13</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.13</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-access</artifactId>
+			<version>1.0.13</version>
+		</dependency>
+
+		<!-- logback condition -->
+		<dependency>
+			<groupId>org.codehaus.janino</groupId>
+			<artifactId>janino</artifactId>
+			<version>2.7.8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.janino</groupId>
+			<artifactId>commons-compiler</artifactId>
+			<version>2.7.8</version>
+		</dependency>
+
+		<!-- 单元测试 -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<!-- 项目构建 -->
+	<build>
+		<plugins>
+
+			<!-- 版本打包插件，在dos跳转到项目根目录，依次执行（需保证没有引用快照、本地与SVN服务器内容完全一致）: 
+				1 发布基线到svn: mvn release:prepare 
+				2 发布引用到私服 : mvn release:perform -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<!-- 项目的SVN基线目录（需保证目录已存在） -->
+					<tagBase>http://172.168.27.5:81/svn/release/103mtosi/src/mtosi_wsc_integrity_analyzer/tags</tagBase>
+				</configuration>
+			</plugin>
+
+			<!-- 测试插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.7.2</version>
+				<configuration>
+					<!-- 解决控制台输出乱码问题 -->
+					<forkMode>once</forkMode>
+					<argLine>-Dfile.encoding=UTF-8</argLine>
+					<systemProperties>
+						<property>
+							<name>net.sourceforge.cobertura.datafile</name>
+							<value>target/cobertura/cobertura.ser</value>
+						</property>
+					</systemProperties>
+					<!-- 项目打包时是否跳过d单元测试 -->
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+
+			<!-- 自动生成脚本插件:项目打包 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>catt-maven-plugin</artifactId>
+				<version>${catt.plugin.version}</version>
+				<executions>
+					<execution>
+						<id>catt-install</id>
+						<phase>install</phase>
+						<goals>
+							<goal>install</goal>
+						</goals>
+						<configuration>
+							<scriptType>lib</scriptType>
+							<mainClass>com.catt.demo.Main</mainClass>
+							<versionClass>com.catt.zhwg.wscia.Version</versionClass>
+							<charset>UTF-8</charset>
+							<xms>64m</xms>
+							<xmx>128m</xmx>
+							<linuxLibPath>./lib</linuxLibPath>
+							<winLibPath>.\lib</winLibPath>
+							<linuxCommonLibPath>/home/cattsoft/commonLib</linuxCommonLibPath>
+							<winCommonLibPath>D:\commonLib</winCommonLibPath>
+							<linuxMavenLibPath>/home/cattsoft/mavenRepository</linuxMavenLibPath>
+							<winMavenLibPath>D:\mavenRepository</winMavenLibPath>
+							<pathPrefixMode>2</pathPrefixMode>
+							<mainProVersion>false</mainProVersion>
+							<cpsMain>true</cpsMain>
+							<cpsAnt>false</cpsAnt>
+							<cpsCrypto>false</cpsCrypto>
+							<cpsAutodb>false</cpsAutodb>
+							<cpsStartcheck>false</cpsStartcheck>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Ant插件：项目部署文件复制 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>ant-build</id>
+						<phase>package</phase>
+						<configuration>
+							<target>
+								<echo>拷贝数据库脚本</echo>
+								<copy todir="${release.dir}/script">
+									<fileset dir="script" />
+								</copy>
+								<echo>拷贝项目配置文件</echo>
+								<copy todir="${release.dir}/conf">
+									<fileset dir="conf" />
+								</copy>
+								<echo>拷贝文档</echo>
+								<copy todir="${release.dir}/doc/04_维护文档">
+									<fileset dir="doc/04_维护文档" />
+								</copy>
+								<copy todir="${release.dir}/doc/06_使用文档">
+									<fileset dir="doc/06_使用文档" />
+								</copy>
+								<copy todir="${release.dir}/doc/07_演示文档">
+									<fileset dir="doc/07_演示文档" />
+								</copy>
+								<echo>拷贝编译jar文件</echo>
+								<copy file="${project.build.directory}/${project.artifactId}-${project.version}.jar" tofile="${release.dir}/lib/${project.artifactId}.jar" />
+								<!-- copy todir="${release.dir}/lib">
+									<fileset dir="${project.build.directory}">
+										<include name="${project.artifactId}-${project.version}.jar" />
+									</fileset>
+								</copy -->
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- 打包源码: 项目发布基线版本时会自动打包源码，不要启用此插件，否则会失败 -->
+			<!-- plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>jar-no-fork</goal>
+							<goal>test-jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin -->
+
+			<!-- 打包javadoc: 项目发布基线版本时会自动打包javadoc，不要启用此插件，否则会失败 -->
+			<!-- plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin -->
+
+		</plugins>
+	</build>
+
+	<!-- 项目发布管理 -->
+	<distributionManagement>
+	
+		<!-- 私服地址 ，公司级基线仓库 -->
+		<repository>
+			<id>Releases</id>
+			<url>http://172.168.10.100:8081/nexus/content/repositories/releases</url>
+		</repository>
+		
+		<!-- 私服地址 ，公司级快照仓库 -->
+		<snapshotRepository>
+			<id>Snapshots</id>
+			<url>http://172.168.10.100:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>

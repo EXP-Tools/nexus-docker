@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.catt</groupId>
+  <artifactId>ktjsdp-demo-archetype</artifactId>
+  <version>1.2.0.1-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20151029.022813</timestamp>
+      <buildNumber>2</buildNumber>
+    </snapshot>
+    <lastUpdated>20151029022813</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>1.2.0.1-20151029.022813-2</value>
+        <updated>20151029022813</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.2.0.1-20151029.022813-2</value>
+        <updated>20151029022813</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

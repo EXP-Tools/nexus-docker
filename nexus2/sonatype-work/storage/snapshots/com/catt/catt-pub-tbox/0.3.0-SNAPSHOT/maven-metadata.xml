@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.catt</groupId>
+  <artifactId>catt-pub-tbox</artifactId>
+  <version>0.3.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20140306.025509</timestamp>
+      <buildNumber>4</buildNumber>
+    </snapshot>
+    <lastUpdated>20140306025509</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>0.3.0-20140306.025509-4</value>
+        <updated>20140306025509</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>0.3.0-20140306.025509-4</value>
+        <updated>20140306025509</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

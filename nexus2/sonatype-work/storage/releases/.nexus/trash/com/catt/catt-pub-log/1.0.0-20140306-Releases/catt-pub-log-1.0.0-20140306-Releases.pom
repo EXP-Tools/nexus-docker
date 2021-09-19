@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<project
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.catt</groupId>
+    <artifactId>ktjsdp</artifactId>
+    <version>1.0.0-20140306-Releases</version>
+  </parent>
+  <artifactId>catt-pub-log</artifactId>
+  <name>catt-pub-log</name>
+  <packaging>jar</packaging>
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>catt-util</artifactId>
+      <version>${ktjsdp.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.0.13</version>
+      <optional>true</optional>
+    </dependency>
+  </dependencies>
+</project>

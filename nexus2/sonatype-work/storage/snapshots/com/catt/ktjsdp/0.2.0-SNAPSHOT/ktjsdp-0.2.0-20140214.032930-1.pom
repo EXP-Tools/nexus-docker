@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.catt</groupId>
+  <artifactId>ktjsdp</artifactId>
+  <version>0.2.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>ktjsdp</name>
+  <url>http://172.168.10.100/ktjsdp/</url>
+  <description>凯通J2SE开发平台</description>
+  <scm>
+    <connection>scm:svn:http://172.168.27.225/svn/release/99_publicProject/09_J2seDP/04_maven/ktjsdp</connection>
+    <developerConnection>scm:svn:http://172.168.27.225/svn/release/99_publicProject/09_J2seDP/04_maven/ktjsdp</developerConnection>
+    <url>http://172.168.27.225/svn/release/99_publicProject/09_J2seDP/04_maven/ktjsdp</url>
+  </scm>
+
+  <ciManagement>
+    <system>jenkins</system>
+    <url>http://172.168.10.100:8080/jenkins</url>
+  </ciManagement>
+
+  <developers>
+    <developer>
+      <id>1</id>
+      <name>黄坚</name>
+      <email>huangjian@gdcattsoft.com</email>
+      <timezone>8</timezone>
+    </developer>
+  </developers>
+
+  <issueManagement>
+    <system>JIRA</system>
+    <url>http://null</url>
+  </issueManagement>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8.2</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+
+  <distributionManagement>
+    <repository>
+      <id>Releases</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>Snapshots</id>
+      <url>http://172.168.10.100:8081/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+  <modules>
+    <module>catt-util</module>
+    <module>catt-pub-conf</module>
+    <module>catt-pub-db</module>
+    <module>catt-pub-net</module>
+    <module>catt-pub-log</module>
+    <module>catt-pub-tbox</module>
+    <module>catt-util-excel</module>
+    <module>catt-util-task</module>
+    <module>catt-pub-start-check</module>
+    <module>catt-pub-update-script</module>
+    <module>catt-frame-isp</module>
+    <module>catt-frame-collect</module>
+    <module>catt-tools-virtual-interface</module>
+  </modules>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>org.apache.maven.plugin</artifactId>
+          <groupId>maven-site-plugin</groupId>
+          <version>3.3</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>2.9.1</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jxr-plugin</artifactId>
+          <version>2.3</version>
+          <configuration>
+            <aggregate>true</aggregate>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-checkstyle-plugin</artifactId>
+          <version>2.11</version>
+          <configuration>
+            <configLocation>config/maven_checks.xml</configLocation>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+</project>

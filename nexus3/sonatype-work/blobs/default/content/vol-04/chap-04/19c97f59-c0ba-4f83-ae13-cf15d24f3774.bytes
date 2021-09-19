@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.catt.agent</groupId>
+  <artifactId>alarm-adapter-agent-bs</artifactId>
+  <versioning>
+    <versions>
+      <version>5.2.0.0-SNAPSHOT</version>
+      <version>5.2.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20150821074241</lastUpdated>
+  </versioning>
+</metadata>

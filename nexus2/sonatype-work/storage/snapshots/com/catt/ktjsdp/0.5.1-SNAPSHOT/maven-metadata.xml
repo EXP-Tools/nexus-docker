@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.catt</groupId>
+  <artifactId>ktjsdp</artifactId>
+  <version>0.5.1-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20140410.073952</timestamp>
+      <buildNumber>2</buildNumber>
+    </snapshot>
+    <lastUpdated>20140410073952</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>0.5.1-20140410.073952-2</value>
+        <updated>20140410073952</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
