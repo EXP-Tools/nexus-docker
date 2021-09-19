@@ -6,11 +6,11 @@
 # ./run.ps1         // 只运行 Nexus 2 和 Nexus 3
 #------------------------------------------------
 
-param([int]$ver=0)
+param([int]$v=0)
 
-if (${ver} -eq 2) {
+if (${v} -eq 2) {
     $SERVER = "nexus_oss_2"
-} else if (${ver} -eq 3) {
+} else if (${v} -eq 3) {
     $SERVER = "nexus_oss_3"
 } else {
     $SERVER = ""
