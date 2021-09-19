@@ -19,9 +19,9 @@ do
   shift
 done
 
-if [[ ${VER} != "2" ]] ; then
+if [[ ${VER} = "2" ]] ; then
   SERVER="nexus_oss_2"
-elif [[ ${VER} != "3" ]] ; then
+elif [[ ${VER} = "3" ]] ; then
   SERVER="nexus_oss_3"
 else
   SERVER=""
