@@ -9,12 +9,14 @@ services:
   nexus_oss_2:
     hostname: NEXUS_OSS_2
     container_name: NEXUS_OSS_2
-    image: sonatype/nexus:2.14.20-02
+    build: 
+      context: ./nexus2
+      dockerfile: ./Dockerfile
     environment: 
       MAX_HEAP: 768m
       MIN_HEAP: 256m
     volumes:
-      - ./nexus/sonatype-work-2:/sonatype-work
+      - ./nexus2/sonatype-work:/sonatype-work
     ports:
       - 8082:8081
     networks: 
@@ -30,7 +32,7 @@ services:
       MAX_HEAP: 768m
       MIN_HEAP: 256m
     volumes:
-      - ./nexus/sonatype-work-3:/nexus-data
+      - ./nexus3/sonatype-work:/nexus-data
     ports:
       - 8083:8081
     networks: 
