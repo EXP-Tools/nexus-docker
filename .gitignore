@@ -1,2 +1,6 @@
-nexus2/**
-nexus3/**
+# nexus2/**
+# nexus3/**
+
+**/*.log
+**/logs/**
+**/log/**
