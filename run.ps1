@@ -10,7 +10,7 @@ param([int]$v=0)
 
 if (${v} -eq 2) {
     $SERVER = "nexus_oss_2"
-} else if (${v} -eq 3) {
+} elseif (${v} -eq 3) {
     $SERVER = "nexus_oss_3"
 } else {
     $SERVER = ""
