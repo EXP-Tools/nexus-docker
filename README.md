@@ -35,3 +35,7 @@ nexus-docker
 - Nexus3 初始登录账号为 `admin`，随机密码存储在 `./nexus/sonatype-work-3/admin.password`
 
 
+## 分支说明
+
+- master： 空 Nexus 仓库，未初始化
+- produce： 含有本人发布构件的 Nexus 仓库
