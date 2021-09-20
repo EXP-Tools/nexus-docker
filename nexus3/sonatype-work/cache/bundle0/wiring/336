@@ -19,7 +19,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.conten
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.io)(version>=3.34.0))
 106; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.upload)(version>=3.34.0))
-256; version=3.34.0
+258; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.proxy)(version>=3.34.0))
 258; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=com.google.common.hash)(version>=30.1.0))
@@ -73,7 +73,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.goodies.common)(version
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.filter.export)(version>=3.34.0))
 256; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.storage)(version>=3.34.0))
-256; version=3.34.0
+258; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.yaml.snakeyaml.nodes)(version>=1.28.0))
 215; version=1.28.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.httpclient)(version>=3.34.0))

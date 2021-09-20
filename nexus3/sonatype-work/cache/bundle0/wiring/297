@@ -37,7 +37,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.io)(versio
 osgi.wiring.package; (&(osgi.wiring.package=groovy.transform.builder)(version>=2.4.0))
 123; version=2.4.17
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.upload)(version>=3.34.0))
-256; version=3.34.0
+258; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.time)(version>=3.34.0))
 106; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.apache.commons.collections4.map)(version>=4.4.0))
@@ -131,7 +131,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.goodies.common)(version
 osgi.wiring.package; (&(osgi.wiring.package=org.eclipse.aether.version)(version>=1.1.0))
 108; version=1.1.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.storage)(version>=3.34.0))
-256; version=3.34.0
+258; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.httpclient)(version>=3.34.0))
 260; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.cache)(version>=3.34.0))
