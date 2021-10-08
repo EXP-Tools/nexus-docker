@@ -4,7 +4,7 @@
 # 命令执行示例：
 # ./run.sh -v 2    // 只运行 Nexus 2
 # ./run.sh -v 3    // 只运行 Nexus 3
-# ./run.sh         // 只运行 Nexus 2 和 Nexus 3
+# ./run.sh         // 运行 Nexus 2 和 Nexus 3
 #------------------------------------------------
 
 VER="0"

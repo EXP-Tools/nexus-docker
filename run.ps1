@@ -3,7 +3,7 @@
 # 命令执行示例：
 # ./run.ps1 -v 2    // 只运行 Nexus 2
 # ./run.ps1 -v 3    // 只运行 Nexus 3
-# ./run.ps1         // 只运行 Nexus 2 和 Nexus 3
+# ./run.ps1         // 运行 Nexus 2 和 Nexus 3
 #------------------------------------------------
 
 param([int]$v=0)

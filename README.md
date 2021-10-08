@@ -29,7 +29,10 @@ nexus-docker
 - 宿主机安装 docker、docker-compose
 - 下载仓库： `git clone https://github.com/lyy289065406/nexus-docker /usr/local/nexus-docker`
 - 打开仓库目录： `cd /usr/local/nexus-docker`
-- 构建镜像并运行： `docker-compose.yml up -d`
+- 构建镜像并运行：
+    - 只运行 Nexus 2 : `./run.ps1 -v 2` 或 `./run.sh -v 2`
+    - 只运行 Nexus 3 : `./run.ps1 -v 3` 或 `./run.sh -v 3`
+    - 运行 Nexus 2 和 Nexus 3 : `./run.ps1` 或 `./run.sh`
 - 启动后，访问 [`http://localhost:8082`](http://localhost:8082) 打开 Nexus2，访问 [`http://localhost:8083`](http://localhost:8083) 打开 Nexus3
 - Nexus2 初始登录账密为 `admin / admin123`
 - Nexus3 初始登录账号为 `admin`，随机密码存储在 `./nexus/sonatype-work-3/admin.password`
