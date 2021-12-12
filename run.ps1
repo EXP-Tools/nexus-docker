@@ -6,7 +6,7 @@
 # ./run.ps1         // 运行 Nexus 2 和 Nexus 3
 #------------------------------------------------
 
-param([int]$v=0)
+param([int]$v=3)
 
 if (${v} -eq 2) {
     $SERVER = "nexus_oss_2"
