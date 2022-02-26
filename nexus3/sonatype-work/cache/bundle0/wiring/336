@@ -79,7 +79,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.yaml.snakeyaml.nodes)(version>=1
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.httpclient)(version>=3.34.0))
 260; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.cache)(version>=3.34.0))
-256; version=3.34.0
+258; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=com.fasterxml.jackson.dataformat.yaml)(version>=2.11.0))
 214; version=2.11.4
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.transaction)(version>=3.34.0))

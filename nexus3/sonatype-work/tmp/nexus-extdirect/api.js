@@ -145,13 +145,13 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'defaultWorkDirectory',
-        len: 0,
+        name: 'readGroupable',
+        len: 1,
         formHandler: false
       },
       {
-        name: 'readGroupable',
-        len: 1,
+        name: 'defaultWorkDirectory',
+        len: 0,
         formHandler: false
       },
       {

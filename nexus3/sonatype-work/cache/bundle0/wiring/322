@@ -119,7 +119,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.httpcl
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.firewall.event)(version>=3.34.0))
 258; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.cache)(version>=3.34.0))
-256; version=3.34.0
+258; version=3.34.0
 osgi.wiring.package; (osgi.wiring.package=org.apache.http.protocol)
 81; version=0.0.0
 osgi.wiring.package; (&(osgi.wiring.package=org.apache.shiro.mgt)(version>=1.7.0))

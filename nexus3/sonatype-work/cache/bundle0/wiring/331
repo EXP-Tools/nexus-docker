@@ -155,7 +155,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.httpcl
 osgi.wiring.package; (&(osgi.wiring.package=com.fasterxml.jackson.core)(version>=2.11.0))
 125; version=2.11.4
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.cache)(version>=3.34.0))
-256; version=3.34.0
+258; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content.search)(version>=3.34.0))
 272; version=3.34.0
 osgi.wiring.package; (osgi.wiring.package=org.apache.http.message)
