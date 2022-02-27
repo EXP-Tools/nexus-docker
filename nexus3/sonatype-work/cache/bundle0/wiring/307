@@ -91,7 +91,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.conten
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.goodies.common)(version>=2.3.0))
 118; version=2.3.1
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.storage)(version>=3.34.0))
-258; version=3.34.0
+256; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.httpclient)(version>=3.34.0))
 260; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.cache)(version>=3.34.0))

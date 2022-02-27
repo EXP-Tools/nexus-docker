@@ -103,7 +103,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.replic
 osgi.wiring.package; (&(osgi.wiring.package=javax.inject)(version>=1.0.0))
 9; version=1.0.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.storage)(version>=3.34.0))
-258; version=3.34.0
+256; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.httpclient)(version>=3.34.0))
 260; version=3.34.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.cache)(version>=3.34.0))
